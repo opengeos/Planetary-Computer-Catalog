@@ -1,7 +1,7 @@
 {
     "type": "Collection",
     "id": "3dep-lidar-classification",
-    "stac_version": "1.0.0",
+    "stac_version": "1.1.0",
     "description": "This collection is derived from the [USGS 3DEP COPC collection](https://planetarycomputer.microsoft.com/dataset/3dep-lidar-copc). It uses the [ASPRS](https://www.asprs.org/) (American Society for Photogrammetry and Remote Sensing) [Lidar point classification](https://desktop.arcgis.com/en/arcmap/latest/manage-data/las-dataset/lidar-point-classification.htm). See [LAS specification](https://www.ogc.org/standards/LAS) for details.\n\nThis COG type is based on the Classification [PDAL dimension](https://pdal.io/dimensions.html) and uses [`pdal.filters.range`](https://pdal.io/stages/filters.range.html) to select a subset of interesting classifications. Do note that not all LiDAR collections contain a full compliment of classification labels.\nTo remove outliers, the PDAL pipeline uses a noise filter and then outputs the Classification dimension.\n\nThe STAC collection implements the [`item_assets`](https://github.com/stac-extensions/item-assets) and [`classification`](https://github.com/stac-extensions/classification) extensions. These classes are displayed in the \"Item assets\" below. You can programmatically access the full list of class values and descriptions using the `classification:classes` field form the `data` asset on the STAC collection.\n\nClassification rasters were produced as a subset of LiDAR classification categories:\n\n```\n0, Never Classified\n1, Unclassified\n2, Ground\n3, Low Vegetation\n4, Medium Vegetation\n5, High Vegetation\n6, Building\n9, Water\n10, Rail\n11, Road\n17, Bridge Deck\n```\n",
     "links": [
         {

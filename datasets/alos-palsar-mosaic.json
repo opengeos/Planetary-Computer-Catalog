@@ -1,7 +1,7 @@
 {
     "type": "Collection",
     "id": "alos-palsar-mosaic",
-    "stac_version": "1.0.0",
+    "stac_version": "1.1.0",
     "description": "Global 25 m Resolution PALSAR-2/PALSAR Mosaic (MOS)",
     "links": [
         {

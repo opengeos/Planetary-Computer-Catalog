@@ -1,7 +1,7 @@
 {
     "type": "Collection",
     "id": "noaa-cdr-sea-surface-temperature-optimum-interpolation",
-    "stac_version": "1.0.0",
+    "stac_version": "1.1.0",
     "description": "The NOAA 1/4\u00b0 daily Optimum Interpolation Sea Surface Temperature (or daily OISST) Climate Data Record (CDR) provides complete ocean temperature fields constructed by combining bias-adjusted observations from different platforms (satellites, ships, buoys) on a regular global grid, with gaps filled in by interpolation. The main input source is satellite data from the Advanced Very High Resolution Radiometer (AVHRR), which provides high temporal-spatial coverage from late 1981-present. This input must be adjusted to the buoys due to erroneous cold SST data following the Mt Pinatubo and El Chichon eruptions. Applications include climate modeling, resource management, ecological studies on annual to daily scales.\n\nThese Cloud Optimized GeoTIFFs (COGs) were created from NetCDF files which are delivered to Azure as part of the [NOAA Open Data Dissemination (NODD) Program](https://www.noaa.gov/information-technology/open-data-dissemination).\nFor the NetCDF files, see collection `noaa-cdr-sea-surface-temperature-optimum-interpolation-netcdf`.\n",
     "links": [
         {

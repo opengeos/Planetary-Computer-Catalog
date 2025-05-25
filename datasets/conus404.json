@@ -1,0 +1,5626 @@
+{
+    "type": "Collection",
+    "id": "conus404",
+    "stac_version": "1.1.0",
+    "description": "[CONUS404](https://www.usgs.gov/data/conus404-four-kilometer-long-term-regional-hydroclimate-reanalysis-over-conterminous-united) is a unique, high-resolution hydro-climate dataset appropriate for forcing hydrological models and conducting meteorological analysis over the conterminous United States. CONUS404, so named because it covers the CONterminous United States for over 40 years at 4 km resolution, was produced by the Weather Research and Forecasting (WRF) model simulations run by NCAR as part of a collaboration with the USGS Water Mission Area. The CONUS404 includes 42 years of data (water years 1980-2021) and the spatial domain extends beyond the CONUS into Canada and Mexico, thereby capturing transboundary river basins and covering all contributing areas for CONUS surface waters.\n\nThe CONUS404 dataset, produced using WRF version 3.9.1.1, is the successor to the CONUS1 dataset in [ds612.0](https://rda.ucar.edu/datasets/ds612.0/) (Liu, et al., 2017) with improved representation of weather and climate conditions in the central United States due to the addition of a shallow groundwater module and several other improvements in the NOAH-Multiparameterization land surface model. It also uses a more up-to-date and higher-resolution reanalysis dataset (ERA5) as input and covers a longer period than CONUS1.",
+    "links": [
+        {
+            "rel": "items",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/conus404/items",
+            "type": "application/geo+json"
+        },
+        {
+            "rel": "parent",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/",
+            "type": "application/json"
+        },
+        {
+            "rel": "root",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1",
+            "type": "application/json",
+            "title": "Microsoft Planetary Computer STAC API"
+        },
+        {
+            "rel": "self",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/conus404",
+            "type": "application/json"
+        },
+        {
+            "rel": "cite-as",
+            "href": "https://doi.org/10.1175/BAMS-D-21-0326.1"
+        },
+        {
+            "rel": "cite-as",
+            "href": "https://doi.org/10.5066/P9PHPK4F"
+        },
+        {
+            "rel": "cite-as",
+            "href": "https://doi.org/10.5065/ZYY0-Y036"
+        },
+        {
+            "rel": "license",
+            "href": "https://spdx.org/licenses/CC-BY-4.0.html",
+            "type": "text/html",
+            "title": "Creative Commons Attribution 4.0 International"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://planetarycomputer.microsoft.com/dataset/conus404",
+            "type": "text/html",
+            "title": "Human readable dataset overview and reference"
+        }
+    ],
+    "stac_extensions": [
+        "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/xarray-assets/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/datacube/v2.2.0/schema.json"
+    ],
+    "sci:doi": "10.1175/BAMS-D-21-0326.1",
+    "msft:region": "eastus",
+    "sci:citation": "Rasmussen, R. M., Chen, F., Liu, C.H., Ikeda, K., Prein, A., Kim, J., Schneider, T., Dai, A., Gochis, D., Dugger, A., Zhang, Y., Jaye, A., Dudhia, J., He, C., Harrold, M., Xue, L., Chen, S., Newman, A., Dougherty, E., Abolafia-Rosenzweig, R., Lybarger, N. D., Viger, R., Lesmes, D., Skalak, K., Brakebill, J., Cline, D., Dunne, K., Rasmussen, K., & Miguez-Macho, G. (2023). CONUS404: The NCAR\u2013USGS 4-km Long-Term Regional Hydroclimate Reanalysis over the CONUS. Bulletin of the American Meteorological Society, 104(8), E1382-E1408. https://doi.org/10.1175/BAMS-D-21-0326.1",
+    "cube:variables": {
+        "P": {
+            "type": "data",
+            "unit": "Pa",
+            "attrs": {
+                "units": "Pa",
+                "stagger": "",
+                "description": "Total pressure (P0 + PB)"
+            },
+            "shape": [
+                376944,
+                50,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Total pressure (P0 + PB)"
+        },
+        "U": {
+            "type": "data",
+            "unit": "m s-1",
+            "attrs": {
+                "units": "m s-1",
+                "stagger": "X",
+                "description": "U-component of wind with respect to model grid"
+            },
+            "shape": [
+                376944,
+                50,
+                1015,
+                1368
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1368
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north",
+                "west_east_stag"
+            ],
+            "description": "U-component of wind with respect to model grid"
+        },
+        "V": {
+            "type": "data",
+            "unit": "m s-1",
+            "attrs": {
+                "units": "m s-1",
+                "stagger": "Y",
+                "description": "V-component of wind with respect to model grid"
+            },
+            "shape": [
+                376944,
+                50,
+                1016,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1016,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north_stag",
+                "west_east"
+            ],
+            "description": "V-component of wind with respect to model grid"
+        },
+        "W": {
+            "type": "data",
+            "unit": "m s-1",
+            "attrs": {
+                "units": "m s-1",
+                "stagger": "Z",
+                "description": "W-component of wind"
+            },
+            "shape": [
+                376944,
+                51,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top_stag",
+                "south_north",
+                "west_east"
+            ],
+            "description": "W-component of wind"
+        },
+        "Z": {
+            "type": "data",
+            "unit": "m2 s-2",
+            "attrs": {
+                "units": "m2 s-2",
+                "stagger": "Z",
+                "description": "Geopotential height (PH + PHB)/9.81"
+            },
+            "shape": [
+                376944,
+                51,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top_stag",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Geopotential height (PH + PHB)/9.81"
+        },
+        "LH": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "LATENT HEAT FLUX AT THE SURFACE",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "LATENT HEAT FLUX AT THE SURFACE"
+        },
+        "MU": {
+            "type": "data",
+            "unit": "Pa",
+            "attrs": {
+                "units": "Pa",
+                "stagger": "",
+                "description": "dry airmass in column (MU+MUB)"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "dry airmass in column (MU+MUB)"
+        },
+        "Q2": {
+            "type": "data",
+            "unit": "kg kg-1",
+            "attrs": {
+                "units": "kg kg-1",
+                "stagger": "",
+                "long_name": "Water vapor mixing ratio at 2 meters",
+                "description": "QV at 2 M"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "QV at 2 M"
+        },
+        "SR": {
+            "type": "data",
+            "unit": "-",
+            "attrs": {
+                "units": "-",
+                "stagger": "",
+                "description": "fraction of frozen precipitation",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "fraction of frozen precipitation"
+        },
+        "T2": {
+            "type": "data",
+            "unit": "K",
+            "attrs": {
+                "units": "K",
+                "stagger": "",
+                "description": "TEMP at 2 M"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "TEMP at 2 M"
+        },
+        "TG": {
+            "type": "data",
+            "unit": "K",
+            "attrs": {
+                "units": "K",
+                "stagger": "",
+                "description": "bulk ground temperature",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "bulk ground temperature"
+        },
+        "TK": {
+            "type": "data",
+            "unit": "K",
+            "attrs": {
+                "units": "K",
+                "stagger": "",
+                "description": "Air Temperature"
+            },
+            "shape": [
+                376944,
+                50,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Air Temperature"
+        },
+        "TV": {
+            "type": "data",
+            "unit": "K",
+            "attrs": {
+                "units": "K",
+                "stagger": "",
+                "description": "vegetation leaf temperature",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "vegetation leaf temperature"
+        },
+        "GLW": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "DOWNWARD LONG WAVE FLUX AT GROUND SURFACE",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "DOWNWARD LONG WAVE FLUX AT GROUND SURFACE"
+        },
+        "HFX": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "UPWARD HEAT FLUX AT THE SURFACE",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "UPWARD HEAT FLUX AT THE SURFACE"
+        },
+        "LAI": {
+            "type": "data",
+            "unit": "m-2/m-2",
+            "attrs": {
+                "units": "m-2/m-2",
+                "stagger": "",
+                "description": "LEAF AREA INDEX",
+                "number_of_significant_digits": 3
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "LEAF AREA INDEX"
+        },
+        "OLR": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "TOA OUTGOING LONG WAVE",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "TOA OUTGOING LONG WAVE"
+        },
+        "QFX": {
+            "type": "data",
+            "unit": "kg m-2 s-1",
+            "attrs": {
+                "units": "kg m-2 s-1",
+                "stagger": "",
+                "description": "UPWARD MOISTURE FLUX AT THE SURFACE",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "UPWARD MOISTURE FLUX AT THE SURFACE"
+        },
+        "SST": {
+            "type": "data",
+            "unit": "K",
+            "attrs": {
+                "units": "K",
+                "stagger": "",
+                "description": "SEA SURFACE TEMPERATURE"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "SEA SURFACE TEMPERATURE"
+        },
+        "TD2": {
+            "type": "data",
+            "unit": "K",
+            "attrs": {
+                "units": "K",
+                "stagger": "",
+                "description": "2-m dewpoint temperature"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "2-m dewpoint temperature"
+        },
+        "TH2": {
+            "type": "data",
+            "unit": "K",
+            "attrs": {
+                "units": "K",
+                "stagger": "",
+                "description": "POT TEMP at 2 M"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "POT TEMP at 2 M"
+        },
+        "TSK": {
+            "type": "data",
+            "unit": "K",
+            "attrs": {
+                "units": "K",
+                "stagger": "",
+                "description": "SURFACE SKIN TEMPERATURE"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "SURFACE SKIN TEMPERATURE"
+        },
+        "U10": {
+            "type": "data",
+            "unit": "m s-1",
+            "attrs": {
+                "units": "m s-1",
+                "stagger": "",
+                "long_name": "U-component wind with respect to model grid at 10 meters",
+                "description": "U at 10 M"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "U at 10 M"
+        },
+        "UST": {
+            "type": "data",
+            "unit": "m s-1",
+            "attrs": {
+                "units": "m s-1",
+                "stagger": "",
+                "description": "U* IN SIMILARITY THEORY",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "U* IN SIMILARITY THEORY"
+        },
+        "V10": {
+            "type": "data",
+            "unit": "m s-1",
+            "attrs": {
+                "units": "m s-1",
+                "stagger": "",
+                "long_name": "V-component wind with respect to model grid at 10 meters",
+                "description": "V at 10 M"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "V at 10 M"
+        },
+        "ZWT": {
+            "type": "data",
+            "unit": "m",
+            "attrs": {
+                "units": "m",
+                "stagger": "",
+                "description": "water table depth",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "water table depth"
+        },
+        "lat": {
+            "type": "auxiliary",
+            "unit": "degree_north",
+            "attrs": {
+                "units": "degree_north",
+                "stagger": "",
+                "description": "LATITUDE, SOUTH IS NEGATIVE"
+            },
+            "shape": [
+                1015,
+                1367
+            ],
+            "chunks": [
+                882,
+                1188
+            ],
+            "dimensions": [
+                "south_north",
+                "west_east"
+            ],
+            "description": "LATITUDE, SOUTH IS NEGATIVE"
+        },
+        "lon": {
+            "type": "auxiliary",
+            "unit": "degree_east",
+            "attrs": {
+                "units": "degree_east",
+                "stagger": "",
+                "description": "LONGITUDE, WEST IS NEGATIVE"
+            },
+            "shape": [
+                1015,
+                1367
+            ],
+            "chunks": [
+                882,
+                1188
+            ],
+            "dimensions": [
+                "south_north",
+                "west_east"
+            ],
+            "description": "LONGITUDE, WEST IS NEGATIVE"
+        },
+        "ACTR": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated transpiration, accumulated over prior 60 minutes",
+                "description": "acccumlated TR"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated TR"
+        },
+        "PBLH": {
+            "type": "data",
+            "unit": "m",
+            "attrs": {
+                "units": "m",
+                "stagger": "",
+                "description": "PBL HEIGHT"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "PBL HEIGHT"
+        },
+        "PSFC": {
+            "type": "data",
+            "unit": "Pa",
+            "attrs": {
+                "units": "Pa",
+                "stagger": "",
+                "description": "SFC PRESSURE"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "SFC PRESSURE"
+        },
+        "PWAT": {
+            "type": "data",
+            "unit": "meters",
+            "attrs": {
+                "units": "meters",
+                "stagger": "",
+                "sum_op_ncl": "dim_sum_n over dimension(s): bottom_top",
+                "description": "Precipitable Water"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Precipitable Water"
+        },
+        "QICE": {
+            "type": "data",
+            "unit": "kg kg-1",
+            "attrs": {
+                "units": "kg kg-1",
+                "stagger": "",
+                "description": "Ice mixing ratio"
+            },
+            "shape": [
+                376944,
+                50,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Ice mixing ratio"
+        },
+        "QRFS": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated baseflow since model start time",
+                "description": "sum baseflow"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "sum baseflow"
+        },
+        "RECH": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated water tabel recharged since model init time",
+                "description": "Accumulated water tabel recharged"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Accumulated water tabel recharged"
+        },
+        "SH2O": {
+            "type": "data",
+            "unit": "m3 m-3",
+            "attrs": {
+                "units": "m3 m-3",
+                "stagger": "Z",
+                "description": "SOIL LIQUID WATER",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                4,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "soil_layers_stag",
+                "south_north",
+                "west_east"
+            ],
+            "description": "SOIL LIQUID WATER"
+        },
+        "SNOW": {
+            "type": "data",
+            "unit": "kg m-2",
+            "attrs": {
+                "units": "kg m-2",
+                "stagger": "",
+                "description": "SNOW WATER EQUIVALENT"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "SNOW WATER EQUIVALENT"
+        },
+        "TRAD": {
+            "type": "data",
+            "unit": "K",
+            "attrs": {
+                "units": "K",
+                "stagger": "",
+                "description": "surface radiative temperature"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "surface radiative temperature"
+        },
+        "TSLB": {
+            "type": "data",
+            "unit": "K",
+            "attrs": {
+                "units": "K",
+                "stagger": "Z",
+                "description": "SOIL TEMPERATURE",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                4,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "soil_layers_stag",
+                "south_north",
+                "west_east"
+            ],
+            "description": "SOIL TEMPERATURE"
+        },
+        "TSNO": {
+            "type": "data",
+            "unit": "K",
+            "attrs": {
+                "units": "K",
+                "stagger": "Z",
+                "description": "snow temperature",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                3,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "snow_layers_stag",
+                "south_north",
+                "west_east"
+            ],
+            "description": "snow temperature"
+        },
+        "ACEVB": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated latent heat flux over bare ground, accumulated over prior 60 minutes",
+                "description": "acccumlated EVB"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated EVB"
+        },
+        "ACEVC": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated latent heat flux for canopy layer, accumulated over prior 60 minutes",
+                "description": "acccumlated EVC"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated EVC"
+        },
+        "ACEVG": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated ground latent heat flux below canopy, accumulated over prior 60 minutes",
+                "description": "acccumlated EVG"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated EVG"
+        },
+        "ACGHB": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated heat flux into soil or snowpack for bare ground, accumulated over prior 60 minutes",
+                "description": "acccumlated GHB"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated GHB"
+        },
+        "ACGHV": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated heat flux into soil or snowpack under canopy, accumulated over prior 60 minutes",
+                "description": "acccumlated GHV"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated GHV"
+        },
+        "ACIRB": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated net longwave radiation for bare ground, accumulated over prior 60 minutes",
+                "description": "acccumlated IRB"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated IRB"
+        },
+        "ACIRC": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated net longwave radiation from canopy, accumulated over prior 60 minutes",
+                "description": "acccumlated IRC"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated IRC"
+        },
+        "ACIRG": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated net longwave radiation from ground below canopy, accumulated over prior 60 minutes",
+                "description": "acccumlated IRG"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated IRG"
+        },
+        "ACQRF": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated groundwater baseflow, accumulated over prior 60 minutes",
+                "description": "accumulated baseflow"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "accumulated baseflow"
+        },
+        "ACSAV": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated solar radiation absorbed by vegetated fraction, accumulated over prior 60 minutes",
+                "description": "acccumlated SAV"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated SAV"
+        },
+        "ACSHB": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated sensible heat flux at bare fraction, accumulated over prior 60 minutes",
+                "description": "acccumlated SHB"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated SHB"
+        },
+        "ACSHC": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated sensible heat flux, canopy to atmosphere, accumulated over prior 60 minutes",
+                "description": "acccumlated SHC"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated SHC"
+        },
+        "ACSHG": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated sensible heat flux from ground below canopy, accumulated over prior 60 minutes",
+                "description": "acccumlated SHG"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated SHG"
+        },
+        "EMISS": {
+            "type": "data",
+            "unit": "",
+            "attrs": {
+                "units": "",
+                "stagger": "",
+                "description": "SURFACE EMISSIVITY",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "SURFACE EMISSIVITY"
+        },
+        "LWDNB": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS DOWNWELLING LONGWAVE FLUX AT BOTTOM",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS DOWNWELLING LONGWAVE FLUX AT BOTTOM"
+        },
+        "LWDNT": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS DOWNWELLING LONGWAVE FLUX AT TOP",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS DOWNWELLING LONGWAVE FLUX AT TOP"
+        },
+        "LWUPB": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS UPWELLING LONGWAVE FLUX AT BOTTOM",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS UPWELLING LONGWAVE FLUX AT BOTTOM"
+        },
+        "LWUPT": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS UPWELLING LONGWAVE FLUX AT TOP",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS UPWELLING LONGWAVE FLUX AT TOP"
+        },
+        "MLLCL": {
+            "type": "data",
+            "unit": "m",
+            "attrs": {
+                "units": "m",
+                "stagger": "",
+                "long_name": "Mixed-layer lifting condensation level (LCL)",
+                "description": "MIXED-LAYER LCL"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "MIXED-LAYER LCL"
+        },
+        "O3RAD": {
+            "type": "data",
+            "unit": "ppmv",
+            "attrs": {
+                "units": "ppmv",
+                "stagger": "",
+                "description": "RADIATION 3D OZONE",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                50,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north",
+                "west_east"
+            ],
+            "description": "RADIATION 3D OZONE"
+        },
+        "P_HYD": {
+            "type": "data",
+            "unit": "Pa",
+            "attrs": {
+                "units": "Pa",
+                "stagger": "",
+                "description": "hydrostatic pressure"
+            },
+            "shape": [
+                376944,
+                50,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north",
+                "west_east"
+            ],
+            "description": "hydrostatic pressure"
+        },
+        "QNICE": {
+            "type": "data",
+            "unit": "  kg-1",
+            "attrs": {
+                "units": "  kg-1",
+                "stagger": "",
+                "description": "Ice Number concentration"
+            },
+            "shape": [
+                376944,
+                50,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Ice Number concentration"
+        },
+        "QRAIN": {
+            "type": "data",
+            "unit": "kg kg-1",
+            "attrs": {
+                "units": "kg kg-1",
+                "stagger": "",
+                "description": "Rain water mixing ratio"
+            },
+            "shape": [
+                376944,
+                50,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Rain water mixing ratio"
+        },
+        "QSLAT": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated groundwater lateral flow since model start time",
+                "description": "sum lateral flow"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "sum lateral flow"
+        },
+        "QSNOW": {
+            "type": "data",
+            "unit": "kg kg-1",
+            "attrs": {
+                "units": "kg kg-1",
+                "stagger": "",
+                "description": "Snow mixing ratio"
+            },
+            "shape": [
+                376944,
+                50,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Snow mixing ratio"
+        },
+        "SBLCL": {
+            "type": "data",
+            "unit": "m",
+            "attrs": {
+                "units": "m",
+                "stagger": "",
+                "long_name": "Surface-based lifting condensation level (LCL)",
+                "description": "SURFACE-BASED LCL"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "SURFACE-BASED LCL"
+        },
+        "SMOIS": {
+            "type": "data",
+            "unit": "m3 m-3",
+            "attrs": {
+                "units": "m3 m-3",
+                "stagger": "Z",
+                "description": "SOIL MOISTURE",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                4,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "soil_layers_stag",
+                "south_north",
+                "west_east"
+            ],
+            "description": "SOIL MOISTURE"
+        },
+        "SNICE": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "Z",
+                "description": "snow layer ice"
+            },
+            "shape": [
+                376944,
+                3,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "snow_layers_stag",
+                "south_north",
+                "west_east"
+            ],
+            "description": "snow layer ice"
+        },
+        "SNLIQ": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "Z",
+                "description": "snow layer liquid"
+            },
+            "shape": [
+                376944,
+                3,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "snow_layers_stag",
+                "south_north",
+                "west_east"
+            ],
+            "description": "snow layer liquid"
+        },
+        "SNOWC": {
+            "type": "data",
+            "unit": "",
+            "attrs": {
+                "units": "",
+                "stagger": "",
+                "description": "FLAG INDICATING SNOW COVERAGE (1 FOR SNOW COVER)",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "FLAG INDICATING SNOW COVERAGE (1 FOR SNOW COVER)"
+        },
+        "SNOWH": {
+            "type": "data",
+            "unit": "m",
+            "attrs": {
+                "units": "m",
+                "stagger": "",
+                "description": "PHYSICAL SNOW DEPTH",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "PHYSICAL SNOW DEPTH"
+        },
+        "SRH01": {
+            "type": "data",
+            "unit": "m2s-2",
+            "attrs": {
+                "units": "m2s-2",
+                "stagger": "",
+                "description": "0-1km storm-relative helicity"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "0-1km storm-relative helicity"
+        },
+        "SRH03": {
+            "type": "data",
+            "unit": "m2s-2",
+            "attrs": {
+                "units": "m2s-2",
+                "stagger": "",
+                "description": "0-3km storm-relative helicity"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "0-3km storm-relative helicity"
+        },
+        "SSTSK": {
+            "type": "data",
+            "unit": "K",
+            "attrs": {
+                "units": "K",
+                "stagger": "",
+                "description": "SKIN SEA SURFACE TEMPERATURE",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "SKIN SEA SURFACE TEMPERATURE"
+        },
+        "SWDNB": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS DOWNWELLING SHORTWAVE FLUX AT BOTTOM",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS DOWNWELLING SHORTWAVE FLUX AT BOTTOM"
+        },
+        "SWDNT": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS DOWNWELLING SHORTWAVE FLUX AT TOP",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS DOWNWELLING SHORTWAVE FLUX AT TOP"
+        },
+        "SWUPB": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS UPWELLING SHORTWAVE FLUX AT BOTTOM",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS UPWELLING SHORTWAVE FLUX AT BOTTOM"
+        },
+        "SWUPT": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS UPWELLING SHORTWAVE FLUX AT TOP",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS UPWELLING SHORTWAVE FLUX AT TOP"
+        },
+        "USHR1": {
+            "type": "data",
+            "unit": "s-1",
+            "attrs": {
+                "units": "s-1",
+                "stagger": "",
+                "description": "0-1km AGL U-component Wind Shear"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "0-1km AGL U-component Wind Shear"
+        },
+        "USHR6": {
+            "type": "data",
+            "unit": "s-1",
+            "attrs": {
+                "units": "s-1",
+                "stagger": "",
+                "description": "0-6km AGL U-component Wind Shear"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "0-6km AGL U-component Wind Shear"
+        },
+        "VSHR1": {
+            "type": "data",
+            "unit": "s-1",
+            "attrs": {
+                "units": "s-1",
+                "stagger": "",
+                "description": "0-1km AGL V-component Wind Shear"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "0-1km AGL V-component Wind Shear"
+        },
+        "VSHR6": {
+            "type": "data",
+            "unit": "s-1",
+            "attrs": {
+                "units": "s-1",
+                "stagger": "",
+                "description": "0-6km AGL V-component Wind Shear"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "0-6km AGL V-component Wind Shear"
+        },
+        "ZSNSO": {
+            "type": "data",
+            "unit": "m",
+            "attrs": {
+                "units": "m",
+                "stagger": "Z",
+                "description": "layer-bottom depth from snow surf",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                7,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "snso_layers_stag",
+                "south_north",
+                "west_east"
+            ],
+            "description": "layer-bottom depth from snow surf"
+        },
+        "lat_u": {
+            "type": "auxiliary",
+            "unit": "degree_north",
+            "attrs": {
+                "units": "degree_north",
+                "stagger": "X",
+                "description": "LATITUDE, SOUTH IS NEGATIVE"
+            },
+            "shape": [
+                1015,
+                1368
+            ],
+            "chunks": [
+                882,
+                1188
+            ],
+            "dimensions": [
+                "south_north",
+                "west_east_stag"
+            ],
+            "description": "LATITUDE, SOUTH IS NEGATIVE"
+        },
+        "lat_v": {
+            "type": "auxiliary",
+            "unit": "degree_north",
+            "attrs": {
+                "units": "degree_north",
+                "stagger": "Y",
+                "description": "LATITUDE, SOUTH IS NEGATIVE"
+            },
+            "shape": [
+                1016,
+                1367
+            ],
+            "chunks": [
+                883,
+                1187
+            ],
+            "dimensions": [
+                "south_north_stag",
+                "west_east"
+            ],
+            "description": "LATITUDE, SOUTH IS NEGATIVE"
+        },
+        "lon_u": {
+            "type": "auxiliary",
+            "unit": "degree_east",
+            "attrs": {
+                "units": "degree_east",
+                "stagger": "X",
+                "description": "LONGITUDE, WEST IS NEGATIVE"
+            },
+            "shape": [
+                1015,
+                1368
+            ],
+            "chunks": [
+                882,
+                1188
+            ],
+            "dimensions": [
+                "south_north",
+                "west_east_stag"
+            ],
+            "description": "LONGITUDE, WEST IS NEGATIVE"
+        },
+        "lon_v": {
+            "type": "auxiliary",
+            "unit": "degree_east",
+            "attrs": {
+                "units": "degree_east",
+                "stagger": "Y",
+                "description": "LONGITUDE, WEST IS NEGATIVE"
+            },
+            "shape": [
+                1016,
+                1367
+            ],
+            "chunks": [
+                883,
+                1187
+            ],
+            "dimensions": [
+                "south_north_stag",
+                "west_east"
+            ],
+            "description": "LONGITUDE, WEST IS NEGATIVE"
+        },
+        "ACDEWC": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated canopy dew rate, accumulated over prior 60 minutes",
+                "description": "acccumlated QDEWC"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated QDEWC"
+        },
+        "ACECAN": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated net evaporation of canopy water (evap + sublim - dew - frost), accumulated over prior 60 minutes",
+                "description": "acccumlated ECAN"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated ECAN"
+        },
+        "ACEDIR": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated net soil evaporation or snowpack sublimation (evap or sublim - dew or frost), accumulated over prior 60 minutes",
+                "description": "acccumlated EDIR"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated EDIR"
+        },
+        "ACEVAC": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated canopy evaporation, accumulated over prior 60 minutes",
+                "description": "acccumlated QEVAC"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated QEVAC"
+        },
+        "ACFROC": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated canopy frost, accumulated over prior 60 minutes",
+                "description": "acccumlated QFROC"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated QFROC"
+        },
+        "ACFRZC": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated refreezing of canopy liquid water, accumulated over prior 60 minutes",
+                "description": "acccumlated QFRZC"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated QFRZC"
+        },
+        "ACINTR": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated canopy rain interception rate, accumulated over prior 60 minutes",
+                "description": "acccumlated QINTR"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated QINTR"
+        },
+        "ACINTS": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated canopy snow interception rate, accumulated over prior 60 minutes",
+                "description": "acccumlated QINTS"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated QINTS"
+        },
+        "ACPAHB": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated precipitation advected energy to bare ground, accumulated over prior 60 minutes",
+                "description": "acccumlated PAHB"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated PAHB"
+        },
+        "ACPAHG": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated precipitation advected energy to below canopy, accumulated over prior 60 minutes",
+                "description": "acccumlated PAHG"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated PAHG"
+        },
+        "ACPAHV": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated precipitation advected energy to vegetation, accumulated over prior 60 minutes",
+                "description": "acccumlated PAHV"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated PAHV"
+        },
+        "ACQLAT": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated groundwater lateral flow, accumulated over prior 60 minutes",
+                "description": "accumulated lateral flow"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "accumulated lateral flow"
+        },
+        "ACSAGB": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated solar radiation absorbed by bare ground, accumulated over prior 60 minutes",
+                "description": "acccumlated SAG under vegetation"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated SAG under vegetation"
+        },
+        "ACSAGV": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated solar radiation absorbed by vegetated ground, accumulated over prior 60 minutes",
+                "description": "acccumlated SAG in bare section"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated SAG in bare section"
+        },
+        "ACSNOM": {
+            "type": "data",
+            "unit": "kg m-2",
+            "attrs": {
+                "units": "kg m-2",
+                "stagger": "",
+                "long_name": "Accumulated total liquid water out of the snowpack since model initial time",
+                "description": "Accumulated total liquid water out of the snowpack"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Accumulated total liquid water out of the snowpack"
+        },
+        "ACSUBC": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated canopy snow sublimation, accumulated over prior 60 minutes",
+                "description": "acccumlated QSUBC"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated QSUBC"
+        },
+        "ALBEDO": {
+            "type": "data",
+            "unit": "-",
+            "attrs": {
+                "units": "-",
+                "stagger": "",
+                "long_name": "Surface albedo including snow effects",
+                "description": "ALBEDO",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ALBEDO"
+        },
+        "CANICE": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "description": "intercepted ice mass",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "intercepted ice mass"
+        },
+        "CANWAT": {
+            "type": "data",
+            "unit": "kg m-2",
+            "attrs": {
+                "units": "kg m-2",
+                "stagger": "",
+                "description": "CANOPY WATER"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "CANOPY WATER"
+        },
+        "CLDFRA": {
+            "type": "data",
+            "unit": "",
+            "attrs": {
+                "units": "",
+                "stagger": "",
+                "description": "CLOUD FRACTION",
+                "number_of_significant_digits": 4
+            },
+            "shape": [
+                376944,
+                50,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north",
+                "west_east"
+            ],
+            "description": "CLOUD FRACTION"
+        },
+        "COSZEN": {
+            "type": "data",
+            "unit": "dimensionless",
+            "attrs": {
+                "units": "dimensionless",
+                "stagger": "",
+                "description": "COS of SOLAR ZENITH ANGLE"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "COS of SOLAR ZENITH ANGLE"
+        },
+        "LWDNBC": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS DOWNWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS DOWNWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM"
+        },
+        "LWDNTC": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS DOWNWELLING CLEAR SKY LONGWAVE FLUX AT TOP",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS DOWNWELLING CLEAR SKY LONGWAVE FLUX AT TOP"
+        },
+        "LWUPBC": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS UPWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS UPWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM"
+        },
+        "LWUPTC": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS UPWELLING CLEAR SKY LONGWAVE FLUX AT TOP",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS UPWELLING CLEAR SKY LONGWAVE FLUX AT TOP"
+        },
+        "MLCAPE": {
+            "type": "data",
+            "unit": "J kg-1",
+            "attrs": {
+                "units": "J kg-1",
+                "stagger": "",
+                "long_name": "Mixed-layer convective available potential energy (CAPE)",
+                "description": "MIXED-LAYER CAPE"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "MIXED-LAYER CAPE"
+        },
+        "MLCINH": {
+            "type": "data",
+            "unit": "J kg-1",
+            "attrs": {
+                "units": "J kg-1",
+                "stagger": "",
+                "long_name": "Mixed-layer convective inhibition up to the level of free convection (CINH)",
+                "description": "MIXED-LAYER CINH"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "MIXED-LAYER CINH"
+        },
+        "MUCAPE": {
+            "type": "data",
+            "unit": "J kg-1",
+            "attrs": {
+                "units": "J kg-1",
+                "stagger": "",
+                "long_name": "Most-unstable convective available potential energy (CAPE)",
+                "description": "MOST-UNSTABLE CAPE"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "MOST-UNSTABLE CAPE"
+        },
+        "MUCINH": {
+            "type": "data",
+            "unit": "J kg-1",
+            "attrs": {
+                "units": "J kg-1",
+                "stagger": "",
+                "long_name": "Most-unstable convective inhibition up to the level of free convection (CINH)",
+                "description": "MOST-UNSTABLE CINH"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "MOST-UNSTABLE CINH"
+        },
+        "QCLOUD": {
+            "type": "data",
+            "unit": "kg kg-1",
+            "attrs": {
+                "units": "kg kg-1",
+                "stagger": "",
+                "description": "Cloud water mixing ratio"
+            },
+            "shape": [
+                376944,
+                50,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Cloud water mixing ratio"
+        },
+        "QGRAUP": {
+            "type": "data",
+            "unit": "kg kg-1",
+            "attrs": {
+                "units": "kg kg-1",
+                "stagger": "",
+                "description": "Graupel mixing ratio"
+            },
+            "shape": [
+                376944,
+                50,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Graupel mixing ratio"
+        },
+        "QNRAIN": {
+            "type": "data",
+            "unit": "  kg(-1)",
+            "attrs": {
+                "units": "  kg(-1)",
+                "stagger": "",
+                "description": "Rain Number concentration"
+            },
+            "shape": [
+                376944,
+                50,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Rain Number concentration"
+        },
+        "QVAPOR": {
+            "type": "data",
+            "unit": "kg kg-1",
+            "attrs": {
+                "units": "kg kg-1",
+                "stagger": "",
+                "description": "Water vapor mixing ratio"
+            },
+            "shape": [
+                376944,
+                50,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Water vapor mixing ratio"
+        },
+        "SBCAPE": {
+            "type": "data",
+            "unit": "J kg-1",
+            "attrs": {
+                "units": "J kg-1",
+                "stagger": "",
+                "long_name": "Surface-based convective available potential energy (CAPE)",
+                "description": "SURFACE-BASED CAPE"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "SURFACE-BASED CAPE"
+        },
+        "SBCINH": {
+            "type": "data",
+            "unit": "J kg-1",
+            "attrs": {
+                "units": "J kg-1",
+                "stagger": "",
+                "long_name": "Surface-based convective inhibition up to the level of free convection (CINH)",
+                "description": "SURFACE-BASED CINH"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "SURFACE-BASED CINH"
+        },
+        "SEAICE": {
+            "type": "data",
+            "unit": "",
+            "attrs": {
+                "units": "",
+                "stagger": "",
+                "description": "SEA ICE FLAG",
+                "number_of_significant_digits": 3
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "SEA ICE FLAG"
+        },
+        "SMCWTD": {
+            "type": "data",
+            "unit": "m3 m-3",
+            "attrs": {
+                "units": "m3 m-3",
+                "stagger": "",
+                "description": "deep soil moisture"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "deep soil moisture"
+        },
+        "SWDNBC": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM"
+        },
+        "SWDNTC": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT TOP",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT TOP"
+        },
+        "SWDOWN": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "DOWNWARD SHORT WAVE FLUX AT GROUND SURFACE",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "DOWNWARD SHORT WAVE FLUX AT GROUND SURFACE"
+        },
+        "SWNORM": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "NORMAL SHORT WAVE FLUX AT GROUND SURFACE (SLOPE-DEPENDENT)",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "NORMAL SHORT WAVE FLUX AT GROUND SURFACE (SLOPE-DEPENDENT)"
+        },
+        "SWUPBC": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS UPWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS UPWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM"
+        },
+        "SWUPTC": {
+            "type": "data",
+            "unit": "W m-2",
+            "attrs": {
+                "units": "W m-2",
+                "stagger": "",
+                "description": "INSTANTANEOUS UPWELLING CLEAR SKY SHORTWAVE FLUX AT TOP",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "INSTANTANEOUS UPWELLING CLEAR SKY SHORTWAVE FLUX AT TOP"
+        },
+        "U_BUNK": {
+            "type": "data",
+            "unit": "ms-1",
+            "attrs": {
+                "units": "ms-1",
+                "stagger": "",
+                "description": "U-component of Bunkers storm motion"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "U-component of Bunkers storm motion"
+        },
+        "V_BUNK": {
+            "type": "data",
+            "unit": "ms-1",
+            "attrs": {
+                "units": "ms-1",
+                "stagger": "",
+                "description": "V-component of Bunkers storm motion"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "V-component of Bunkers storm motion"
+        },
+        "ACDRIPR": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated canopy precipitation drip rate, accumulated over prior 60 minutes",
+                "description": "acccumlated QDRIPR"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated QDRIPR"
+        },
+        "ACDRIPS": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated canopy snow drip rate, accumulated over prior 60 minutes",
+                "description": "acccumlated QDRIPS"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated QDRIPS"
+        },
+        "ACETLSM": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated total evaporation, accumulated over prior 60 minutes",
+                "description": "acccumlated ET"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated ET"
+        },
+        "ACETRAN": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated plant transpiration, accumulated over prior 60 minutes",
+                "description": "acccumlated ETRAN"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated ETRAN"
+        },
+        "ACLWDNB": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated downwelling longwave radiation flux at bottom, accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED DOWNWELLING LONGWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED DOWNWELLING LONGWAVE FLUX AT BOTTOM"
+        },
+        "ACLWDNT": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated downwelling longwave radiation flux at top, accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED DOWNWELLING LONGWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED DOWNWELLING LONGWAVE FLUX AT TOP"
+        },
+        "ACLWUPB": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated upwelling longwave radiation flux at bottom, accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED UPWELLING LONGWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED UPWELLING LONGWAVE FLUX AT BOTTOM"
+        },
+        "ACLWUPT": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated upwelling longwave radiation flux at top, accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED UPWELLING LONGWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED UPWELLING LONGWAVE FLUX AT TOP"
+        },
+        "ACMELTC": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated canopy snow melt, accumulated over prior 60 minutes",
+                "description": "acccumlated QMELTC"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated QMELTC"
+        },
+        "ACRUNSB": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated subsurface runoff, accumulated over prior 60 minutes",
+                "description": "Accumulated RUNSB"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Accumulated RUNSB"
+        },
+        "ACRUNSF": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated surface runoff, accumulated over prior 60 minutes",
+                "description": "Accumulated RUNSF"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Accumulated RUNSF"
+        },
+        "ACSNBOT": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated liquid water flux out of bottom of snowpack, accumulated over prior 60 minutes",
+                "description": "acccumlated QSNBOT"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated QSNBOT"
+        },
+        "ACSNFRO": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated snowpack frost, accumulated over prior 60 minutes",
+                "description": "acccumlated QSNFRO"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated QSNFRO"
+        },
+        "ACSNSUB": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated snowpack sublimation, accumulated over prior 60 minutes",
+                "description": "acccumlated QSNSUB"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated QSNSUB"
+        },
+        "ACSWDNB": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated downwelling shortwave radiation flux at bottom, accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED DOWNWELLING SHORTWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED DOWNWELLING SHORTWAVE FLUX AT BOTTOM"
+        },
+        "ACSWDNT": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated downwelling shortwave radiation flux at top, accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED DOWNWELLING SHORTWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED DOWNWELLING SHORTWAVE FLUX AT TOP"
+        },
+        "ACSWUPB": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated upwelling shortwave radiation flux at bottom, accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED UPWELLING SHORTWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED UPWELLING SHORTWAVE FLUX AT BOTTOM"
+        },
+        "ACSWUPT": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated upwelling shortwave radiation flux at top, accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED UPWELLING SHORTWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED UPWELLING SHORTWAVE FLUX AT TOP"
+        },
+        "ACTHROR": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated canopy rain throughfall, accumulated over prior 60 minutes",
+                "description": "acccumlated QTHROR"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated QTHROR"
+        },
+        "ACTHROS": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated canopy snow throughfall, accumulated over prior 60 minutes",
+                "description": "acccumlated QTHROS"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated QTHROS"
+        },
+        "RAINNCV": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "description": "TIME-STEP NONCONVECTIVE PRECIPITATION"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "TIME-STEP NONCONVECTIVE PRECIPITATION"
+        },
+        "ACGHFLSM": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated total ground heat flux into soil or snowpack, accumulated over prior 60 minutes",
+                "description": "acccumlated total ground heat flux"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated total ground heat flux"
+        },
+        "ACLHFLSM": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated total latent heat flux, accumulated over prior 60 minutes",
+                "description": "acccumlated total latent heat flux"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated total latent heat flux"
+        },
+        "ACLWDNBC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated downwelling clear sky longwave radiation flux at bottom, accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED DOWNWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED DOWNWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM"
+        },
+        "ACLWDNTC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated downwelling clear sky longwave radiation flux at top, accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED DOWNWELLING CLEAR SKY LONGWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED DOWNWELLING CLEAR SKY LONGWAVE FLUX AT TOP"
+        },
+        "ACLWUPBC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated upwelling clear sky longwave radiation flux at bottom, accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED UPWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED UPWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM"
+        },
+        "ACLWUPTC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated upwelling clear sky longwave radiation flux at top, accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED UPWELLING CLEAR SKY LONGWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED UPWELLING CLEAR SKY LONGWAVE FLUX AT TOP"
+        },
+        "ACPAHLSM": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated total precipitation heat flux advected to surface, accumulated over prior 60 minutes",
+                "description": "acccumlated total precip heat flux"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated total precip heat flux"
+        },
+        "ACSHFLSM": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Acccumlated total sensible heat flux, accumulated over prior 60 minutes",
+                "description": "acccumlated total sensible heat flux"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated total sensible heat flux"
+        },
+        "ACSWDNBC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated downwelling clear sky shortwave radiation flux at bottom, accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM"
+        },
+        "ACSWDNTC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated downwelling clear sky shortwave radiation flux at top, accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT TOP"
+        },
+        "ACSWUPBC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated upwelling clear sky shortwave radiation flux at bottom, accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED UPWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED UPWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM"
+        },
+        "ACSWUPTC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Accumulated upwelling clear sky shortwave radiation flux at top accumulated since last bucket_J (1.0e9 J m-2) reset",
+                "description": "ACCUMULATED UPWELLING CLEAR SKY SHORTWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED UPWELLING CLEAR SKY SHORTWAVE FLUX AT TOP"
+        },
+        "FORCPLSM": {
+            "type": "data",
+            "unit": "Pa",
+            "attrs": {
+                "units": "Pa",
+                "stagger": "",
+                "long_name": "Lowest model pressure into land surface model",
+                "description": "lowest model P into LSM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "lowest model P into LSM"
+        },
+        "FORCQLSM": {
+            "type": "data",
+            "unit": "kg/kg",
+            "attrs": {
+                "units": "kg/kg",
+                "stagger": "",
+                "long_name": "Lowest model mixing ratio into land surface model",
+                "description": "lowest model Q into LSM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "lowest model Q into LSM"
+        },
+        "FORCTLSM": {
+            "type": "data",
+            "unit": "K",
+            "attrs": {
+                "units": "K",
+                "stagger": "",
+                "long_name": "Lowest model temperature into land surface model",
+                "description": "lowest model T into LSM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "lowest model T into LSM"
+        },
+        "FORCWLSM": {
+            "type": "data",
+            "unit": "m/s",
+            "attrs": {
+                "units": "m/s",
+                "stagger": "",
+                "long_name": "Lowest model wind speed into land surface model",
+                "description": "lowest model wind speed into LSM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "lowest model wind speed into LSM"
+        },
+        "FORCZLSM": {
+            "type": "data",
+            "unit": "m",
+            "attrs": {
+                "units": "m",
+                "stagger": "",
+                "long_name": "Lowest model height above ground level into land surface model",
+                "description": "lowest model Z into LSM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "lowest model Z into LSM"
+        },
+        "QSPRINGS": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated seeping water since model start time",
+                "description": "sum seeping water"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "sum seeping water"
+        },
+        "REFL_COM": {
+            "type": "data",
+            "unit": "dbZ",
+            "attrs": {
+                "units": "dbZ",
+                "stagger": "",
+                "description": "COMPOSITE REFLECTIVITY"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "COMPOSITE REFLECTIVITY"
+        },
+        "totalIce": {
+            "type": "data",
+            "unit": "kg kg-1",
+            "attrs": {
+                "units": "kg kg-1",
+                "stagger": "",
+                "sum_op_ncl": "dim_sum_n over dimension(s): bottom_top",
+                "description": "Ice mixing ratio"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Ice mixing ratio"
+        },
+        "totalLiq": {
+            "type": "data",
+            "unit": "kg kg-1",
+            "attrs": {
+                "units": "kg kg-1",
+                "stagger": "",
+                "sum_op_ncl": "dim_sum_n over dimension(s): bottom_top",
+                "description": "Cloud water mixing ratio"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Cloud water mixing ratio"
+        },
+        "totalVap": {
+            "type": "data",
+            "unit": "kg kg-1",
+            "attrs": {
+                "units": "kg kg-1",
+                "stagger": "",
+                "sum_op_ncl": "dim_sum_n over dimension(s): bottom_top",
+                "description": "Water vapor mixing ratio"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Water vapor mixing ratio"
+        },
+        "ACLWDNLSM": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated longwave downwelling radiation at land surface model, accumulated over prior 60 minutes",
+                "description": "acccumlated LWDN"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated LWDN"
+        },
+        "ACLWUPLSM": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated longwave upwelling radiation at land surface model, accumulated over prior 60 minutes",
+                "description": "acccumlated LWUP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated LWUP"
+        },
+        "ACPONDING": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated surface ponding from complete pack melt, accumulated over prior 60 minutes",
+                "description": "acccumlated PONDING"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated PONDING"
+        },
+        "ACRAINLSM": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated liquid precipitation into land surface model, accumulated over prior 60 minutes",
+                "description": "acccumlated RAINLSM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated RAINLSM"
+        },
+        "ACSNOWLSM": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated frozen precipitation into land surface model, accumulated over prior 60 minutes",
+                "description": "acccumlated SNOWLSM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated SNOWLSM"
+        },
+        "ACSWDNLSM": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated shortwave radiation down at land surface model, accumulated over prior 60 minutes",
+                "description": "acccumlated SWDN"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated SWDN"
+        },
+        "ACSWUPLSM": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "long_name": "Accumulated shortwave radiation up at land surface model, accumulated over prior 60 minutes",
+                "description": "acccumlated SWUP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated SWUP"
+        },
+        "I_ACLWDNB": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for downwelling longwave flux at bottom accumulated since model start time",
+                "description": "BUCKET FOR DOWNWELLING LONGWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR DOWNWELLING LONGWAVE FLUX AT BOTTOM"
+        },
+        "I_ACLWDNT": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for downwelling longwave flux at top accumulated since model start time",
+                "description": "BUCKET FOR DOWNWELLING LONGWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR DOWNWELLING LONGWAVE FLUX AT TOP"
+        },
+        "I_ACLWUPB": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for upwelling longwave flux at bottom accumulated since model start time",
+                "description": "BUCKET FOR UPWELLING LONGWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR UPWELLING LONGWAVE FLUX AT BOTTOM"
+        },
+        "I_ACLWUPT": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for upwelling longwave flux at top accumulated since model start time",
+                "description": "BUCKET FOR UPWELLING LONGWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR UPWELLING LONGWAVE FLUX AT TOP"
+        },
+        "I_ACSWDNB": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for downwelling shortwave flux at bottom accumulated since model start time",
+                "description": "BUCKET FOR DOWNWELLING SHORTWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR DOWNWELLING SHORTWAVE FLUX AT BOTTOM"
+        },
+        "I_ACSWDNT": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for downwelling shortwave flux at top accumulated since model start time",
+                "description": "BUCKET FOR DOWNWELLING SHORTWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR DOWNWELLING SHORTWAVE FLUX AT TOP"
+        },
+        "I_ACSWUPB": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for upwelling shortwave flux at bottom accumulated since model start time",
+                "description": "BUCKET FOR UPWELLING SHORTWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR UPWELLING SHORTWAVE FLUX AT BOTTOM"
+        },
+        "I_ACSWUPT": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for upwelling shortwave flux at top accumulated since model start time",
+                "description": "BUCKET FOR UPWELLING SHORTWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR UPWELLING SHORTWAVE FLUX AT TOP"
+        },
+        "REFL_10CM": {
+            "type": "data",
+            "unit": "dBZ",
+            "attrs": {
+                "units": "dBZ",
+                "stagger": "",
+                "description": "Radar reflectivity (lamda = 10 cm)",
+                "number_of_significant_digits": 5
+            },
+            "shape": [
+                376944,
+                50,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "bottom_top",
+                "south_north",
+                "west_east"
+            ],
+            "description": "Radar reflectivity (lamda = 10 cm)"
+        },
+        "ACRAINSNOW": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Acccumlated rain on snow pack, accumulated over prior 60 minutes",
+                "description": "acccumlated rain on snow pack"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "acccumlated rain on snow pack"
+        },
+        "I_ACLWDNBC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for downwelling clear sky longwave flux at bottom accumulated since model start time",
+                "description": "BUCKET FOR DOWNWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR DOWNWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM"
+        },
+        "I_ACLWDNTC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for downwelling clear sky longwave flux at top accumulated since model start time",
+                "description": "BUCKET FOR DOWNWELLING CLEAR SKY LONGWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR DOWNWELLING CLEAR SKY LONGWAVE FLUX AT TOP"
+        },
+        "I_ACLWUPBC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for upwelling clear sky longwave flux at bottom accumulated since model start time",
+                "description": "BUCKET FOR UPWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR UPWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM"
+        },
+        "I_ACLWUPTC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for upwelling clear sky longwave flux at top accumulated since model start time",
+                "description": "BUCKET FOR UPWELLING CLEAR SKY LONGWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR UPWELLING CLEAR SKY LONGWAVE FLUX AT TOP"
+        },
+        "I_ACSWDNBC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for downwelling clear sky shortwave flux at bottom accumulated since model start time",
+                "description": "BUCKET FOR DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM"
+        },
+        "I_ACSWDNTC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for downwelling clear sky shortwave flux at top accumulated since model start time",
+                "description": "BUCKET FOR DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT TOP"
+        },
+        "I_ACSWUPBC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for upwelling clear sky shortwave flux at bottom accumulated since model start time",
+                "description": "BUCKET FOR UPWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR UPWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM"
+        },
+        "I_ACSWUPTC": {
+            "type": "data",
+            "unit": "J m-2",
+            "attrs": {
+                "units": "J m-2",
+                "stagger": "",
+                "long_name": "Bucket for upwelling clear sky shortwave flux at top accumulated since model start time",
+                "description": "BUCKET FOR UPWELLING CLEAR SKY SHORTWAVE FLUX AT TOP"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "BUCKET FOR UPWELLING CLEAR SKY SHORTWAVE FLUX AT TOP"
+        },
+        "SNOWENERGY": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "description": "energy content in snow relative to 273.16"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "energy content in snow relative to 273.16"
+        },
+        "SOILENERGY": {
+            "type": "data",
+            "unit": "kJ/m2",
+            "attrs": {
+                "units": "kJ/m2",
+                "stagger": "",
+                "description": "energy content in soil relative to 273.16"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "energy content in soil relative to 273.16"
+        },
+        "PREC_ACC_NC": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated grid scale  precipitation , accumulated over prior 60 minutes",
+                "description": "ACCUMULATED GRID SCALE  PRECIPITATION OVER prec_acc_dt PERIODS OF TIME"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED GRID SCALE  PRECIPITATION OVER prec_acc_dt PERIODS OF TIME"
+        },
+        "SNOW_ACC_NC": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated snow water equivalent, accumulated over prior 60 minutes",
+                "description": "ACCUMULATED SNOW WATER EQUIVALENT OVER prec_acc_dt PERIODS OF TIME"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED SNOW WATER EQUIVALENT OVER prec_acc_dt PERIODS OF TIME"
+        },
+        "REFL_1KM_AGL": {
+            "type": "data",
+            "unit": "dbZ",
+            "attrs": {
+                "units": "dbZ",
+                "stagger": "",
+                "description": "1KM AGL REFLECTIVITY"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "1KM AGL REFLECTIVITY"
+        },
+        "GRAUPEL_ACC_NC": {
+            "type": "data",
+            "unit": "mm",
+            "attrs": {
+                "units": "mm",
+                "stagger": "",
+                "long_name": "Accumulated graupel water equivalent, accumulated over prior 60 minutes",
+                "description": "ACCUMULATED GRAUPEL WATER EQUIVALENT OVER prec_acc_dt PERIODS OF TIME"
+            },
+            "shape": [
+                376944,
+                1015,
+                1367
+            ],
+            "chunks": [
+                1,
+                1015,
+                1367
+            ],
+            "dimensions": [
+                "time",
+                "south_north",
+                "west_east"
+            ],
+            "description": "ACCUMULATED GRAUPEL WATER EQUIVALENT OVER prec_acc_dt PERIODS OF TIME"
+        }
+    },
+    "msft:container": "noaa",
+    "cube:dimensions": {
+        "lat": {
+            "axis": "y",
+            "type": "spatial",
+            "extent": [
+                17.647308349609375,
+                57.34341812133789
+            ]
+        },
+        "lon": {
+            "axis": "x",
+            "type": "spatial",
+            "extent": [
+                -138.73135375976562,
+                -57.068634033203125
+            ]
+        },
+        "time": {
+            "step": "P0DT1H0M0S",
+            "type": "temporal",
+            "extent": [
+                "1979-10-01T00:00:00Z",
+                "2022-09-30T23:00:00Z"
+            ],
+            "description": "time"
+        },
+        "west_east": {
+            "type": "count",
+            "extent": [
+                0,
+                1366
+            ],
+            "description": "west_east index"
+        },
+        "bottom_top": {
+            "type": "count",
+            "extent": [
+                0,
+                49
+            ],
+            "description": "bottom_top index"
+        },
+        "south_north": {
+            "type": "count",
+            "extent": [
+                0,
+                1014
+            ],
+            "description": "south_north index"
+        },
+        "west_east_stag": {
+            "type": "count",
+            "extent": [
+                0,
+                1367
+            ],
+            "description": "west_east_stag index."
+        },
+        "bottom_top_stag": {
+            "type": "count",
+            "extent": [
+                0,
+                50
+            ],
+            "description": "bottom_top_stag index"
+        },
+        "snow_layers_stag": {
+            "type": "count",
+            "extent": [
+                0,
+                2
+            ],
+            "description": "snow layer index."
+        },
+        "snso_layers_stag": {
+            "type": "count",
+            "extent": [
+                0,
+                6
+            ],
+            "description": "snso layer index."
+        },
+        "soil_layers_stag": {
+            "type": "count",
+            "extent": [
+                0,
+                4
+            ],
+            "description": "soil layer index."
+        },
+        "south_north_stag": {
+            "type": "count",
+            "extent": [
+                0,
+                1015
+            ],
+            "description": "south_north_stag index."
+        }
+    },
+    "msft:storage_account": "azureopendatastorage",
+    "msft:short_description": "High-resolution hydro-climate dataset for forcing hydrological models and meteorological analysis over the conterminous United States.",
+    "title": "CONUS404",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -137.873,
+                    17.631,
+                    -58.463,
+                    56.704
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "1979-10-01T00:00:00Z",
+                    "2022-09-30T23:00:00Z"
+                ]
+            ]
+        }
+    },
+    "license": "CC-BY-4.0",
+    "keywords": [
+        "CONUS404",
+        "Hydroclimate",
+        "Hydrology",
+        "Inland Waters",
+        "Precipitation",
+        "Weather",
+        "Climate"
+    ],
+    "providers": [
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        },
+        {
+            "name": "USGS",
+            "roles": [
+                "producer"
+            ],
+            "url": "https://doi.org/10.5066/P9PHPK4F"
+        },
+        {
+            "name": "NCAR",
+            "roles": [
+                "producer"
+            ],
+            "url": "https://doi.org/10.5065/ZYY0-Y036"
+        }
+    ],
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/conus404-thumbnail.png",
+            "type": "image/png",
+            "title": "CONUS404 Thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "zarr-abfs": {
+            "href": "az://noaa/conus404.zarr",
+            "type": "application/vnd+zarr",
+            "title": "CONUS404 Zarr root",
+            "description": "Azure Blob File Syustem URI of the Zarr store for the CONUS404 dataset.",
+            "xarray:open_kwargs": {
+                "consolidated": true
+            },
+            "xarray:storage_options": {
+                "account_name": "azureopendatastorage"
+            },
+            "roles": [
+                "data",
+                "zarr",
+                "abfs"
+            ]
+        },
+        "zarr-https": {
+            "href": "https://azureopendatastorage.blob.core.windows.net/noaa/conus404.zarr",
+            "type": "application/vnd+zarr",
+            "title": "CONUS404 Zarr root",
+            "description": "HTTPS URI of the Zarr store for the CONUS404 dataset.",
+            "xarray:open_kwargs": {
+                "consolidated": true
+            },
+            "roles": [
+                "data",
+                "zarr",
+                "https"
+            ]
+        }
+    }
+}

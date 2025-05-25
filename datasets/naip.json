@@ -1,8 +1,8 @@
 {
     "type": "Collection",
     "id": "naip",
-    "stac_version": "1.0.0",
-    "description": "The [National Agriculture Imagery Program](https://www.fsa.usda.gov/programs-and-services/aerial-photography/imagery-programs/naip-imagery/) (NAIP) provides U.S.-wide, high-resolution aerial imagery, with four spectral bands (R, G, B, IR).  NAIP is administered by the [Aerial Field Photography Office](https://www.fsa.usda.gov/programs-and-services/aerial-photography/) (AFPO) within the [US Department of Agriculture](https://www.usda.gov/) (USDA).  Data are captured at least once every three years for each state.  This dataset represents NAIP data from 2010-present, in [cloud-optimized GeoTIFF](https://www.cogeo.org/) format.\n",
+    "stac_version": "1.1.0",
+    "description": "The [National Agriculture Imagery Program](https://www.fsa.usda.gov/programs-and-services/aerial-photography/imagery-programs/naip-imagery/) (NAIP) \nprovides U.S.-wide, high-resolution aerial imagery, with four spectral bands (R, G, B, IR). \nNAIP is administered by the [Aerial Field Photography Office](https://www.fsa.usda.gov/programs-and-services/aerial-photography/) (AFPO) \nwithin the [US Department of Agriculture](https://www.usda.gov/) (USDA). \nData are captured at least once every three years for each state. \nThis dataset represents NAIP data from 2010-present, in [cloud-optimized GeoTIFF](https://www.cogeo.org/) format.\nYou can visualize the coverage of current and past collections [here](https://naip-usdaonline.hub.arcgis.com/). \n",
     "links": [
         {
             "rel": "items",
@@ -96,6 +96,24 @@
                     24.744,
                     -66.951,
                     49.346
+                ],
+                [
+                    -156.003,
+                    19.059,
+                    -154.809,
+                    20.127
+                ],
+                [
+                    -67.316,
+                    17.871,
+                    -65.596,
+                    18.565
+                ],
+                [
+                    -64.94,
+                    17.622,
+                    -64.56,
+                    17.814
                 ]
             ]
         },
@@ -103,7 +121,7 @@
             "interval": [
                 [
                     "2010-01-01T00:00:00Z",
-                    "2021-12-31T00:00:00Z"
+                    "2023-12-31T00:00:00Z"
                 ]
             ]
         }
@@ -145,6 +163,7 @@
     ],
     "summaries": {
         "gsd": [
+            0.3,
             0.6,
             1.0
         ],

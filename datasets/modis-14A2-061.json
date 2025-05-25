@@ -1,7 +1,7 @@
 {
     "type": "Collection",
     "id": "modis-14A2-061",
-    "stac_version": "1.0.0",
+    "stac_version": "1.1.0",
     "description": "The Moderate Resolution Imaging Spectroradiometer (MODIS) Thermal Anomalies and Fire 8-Day Version 6.1 data are generated at 1 kilometer (km) spatial resolution as a Level 3 product. The MOD14A2 gridded composite contains the maximum value of the individual fire pixel classes detected during the eight days of acquisition. The Science Dataset (SDS) layers include the fire mask and pixel quality indicators.",
     "links": [
         {
