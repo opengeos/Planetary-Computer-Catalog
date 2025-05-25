@@ -1,7 +1,7 @@
 # Planetary-Computer-Catalog
 
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/giswqs/Planetary-Computer-Catalog/blob/master/pc_catalog.ipynb)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/giswqs/Planetary-Computer-Catalog/HEAD?labpath=pc_catalog.ipynb)
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/opengeos/Planetary-Computer-Catalog/blob/master/pc_catalog.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opengeos/Planetary-Computer-Catalog/HEAD?labpath=pc_catalog.ipynb)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Introduction
@@ -14,26 +14,26 @@ A complete list of geospatial datasets on Planetary Computer is available [here]
 
 This repo provides the list of geospatial datasets on Planetary Computer in two formats:
 
-- Tab separated values (TSV) file: [pc_catalog.tsv](https://github.com/giswqs/Planetary-Computer-Catalog/blob/master/pc_catalog.tsv)
-- JSON file: [pc_catalog.json](https://github.com/giswqs/Planetary-Computer-Catalog/blob/master/pc_catalog.json)
+- Tab separated values (TSV) file: [pc_catalog.tsv](https://github.com/opengeos/Planetary-Computer-Catalog/blob/master/pc_catalog.tsv)
+- JSON file: [pc_catalog.json](https://github.com/opengeos/Planetary-Computer-Catalog/blob/master/pc_catalog.json)
 
 The TSV file can be easily read into a Pandas DataFrame using the following code:
 
 ```python
 import pandas as pd
 
-url = 'https://github.com/giswqs/Planetary-Computer-Catalog/raw/master/pc_catalog.tsv'
+url = 'https://github.com/opengeos/Planetary-Computer-Catalog/raw/master/pc_catalog.tsv'
 df = pd.read_csv(url, sep='\t')
 df.head()
 ```
 
 ## Related Projects
 
-- A list of open datasets on AWS: [aws-open-data](https://github.com/giswqs/aws-open-data)
-- A list of open geospatial datasets on AWS: [aws-open-data-geo](https://github.com/giswqs/aws-open-data-geo)
-- A list of open geospatial datasets on AWS with a STAC endpoint: [aws-open-data-stac](https://github.com/giswqs/aws-open-data-stac)
-- A list of STAC endpoints from stacindex.org: [stac-index-catalogs](https://github.com/giswqs/stac-index-catalogs)
-- A list of geospatial datasets on Microsoft Planetary Computer: [Planetary-Computer-Catalog](https://github.com/giswqs/Planetary-Computer-Catalog)
-- A list of geospatial datasets on Google Earth Engine: [Earth-Engine-Catalog](https://github.com/giswqs/Earth-Engine-Catalog)
-- A list of geospatial datasets on NASA's Common Metadata Repository (CMR): [NASA-CMR-STAC](https://github.com/giswqs/NASA-CMR-STAC)
-- A list of geospatial data catalogs: [geospatial-data-catalogs](https://github.com/giswqs/geospatial-data-catalogs)
+- A list of open datasets on AWS: [aws-open-data](https://github.com/opengeos/aws-open-data)
+- A list of open geospatial datasets on AWS: [aws-open-data-geo](https://github.com/opengeos/aws-open-data-geo)
+- A list of open geospatial datasets on AWS with a STAC endpoint: [aws-open-data-stac](https://github.com/opengeos/aws-open-data-stac)
+- A list of STAC endpoints from stacindex.org: [stac-index-catalogs](https://github.com/opengeos/stac-index-catalogs)
+- A list of geospatial datasets on Microsoft Planetary Computer: [Planetary-Computer-Catalog](https://github.com/opengeos/Planetary-Computer-Catalog)
+- A list of geospatial datasets on Google Earth Engine: [Earth-Engine-Catalog](https://github.com/opengeos/Earth-Engine-Catalog)
+- A list of geospatial datasets on NASA's Common Metadata Repository (CMR): [NASA-CMR-STAC](https://github.com/opengeos/NASA-CMR-STAC)
+- A list of geospatial data catalogs: [geospatial-data-catalogs](https://github.com/opengeos/geospatial-data-catalogs)
