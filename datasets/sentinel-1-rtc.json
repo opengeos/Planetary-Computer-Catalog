@@ -55,7 +55,7 @@
                 {
                     "nodata": -32768,
                     "data_type": "float32",
-                    "spatial_resolution": 10.0
+                    "spatial_resolution": 10
                 }
             ]
         },
@@ -70,7 +70,7 @@
                 {
                     "nodata": -32768,
                     "data_type": "float32",
-                    "spatial_resolution": 10.0
+                    "spatial_resolution": 10
                 }
             ]
         },
@@ -85,7 +85,7 @@
                 {
                     "nodata": -32768,
                     "data_type": "float32",
-                    "spatial_resolution": 10.0
+                    "spatial_resolution": 10
                 }
             ]
         },
@@ -100,7 +100,7 @@
                 {
                     "nodata": -32768,
                     "data_type": "float32",
-                    "spatial_resolution": 10.0
+                    "spatial_resolution": 10
                 }
             ]
         }
@@ -161,7 +161,8 @@
     "summaries": {
         "platform": [
             "SENTINEL-1A",
-            "SENTINEL-1B"
+            "SENTINEL-1B",
+            "SENTINEL-1C"
         ],
         "constellation": [
             "Sentinel-1"
