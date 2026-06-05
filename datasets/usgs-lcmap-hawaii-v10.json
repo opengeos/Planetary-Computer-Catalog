@@ -56,6 +56,12 @@
             "href": "https://doi.org/10.5066/P91E8M23"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/usgs-lcmap-hawaii-v10/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/usgs-lcmap-hawaii-v10",
             "type": "text/html",

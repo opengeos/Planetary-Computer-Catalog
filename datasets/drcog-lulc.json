@@ -50,6 +50,12 @@
             "title": "Land_Cover_Raster_Data_2020"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/drcog-lulc/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/drcog-lulc",
             "type": "text/html",

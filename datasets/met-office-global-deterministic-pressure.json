@@ -1,0 +1,448 @@
+{
+    "type": "Collection",
+    "id": "met-office-global-deterministic-pressure",
+    "stac_version": "1.1.0",
+    "description": "This collection offers 8 parameters at 33 available pressure levels (from 100000Pa to 1000Pa) from the Met Office global deterministic 10km forecast. This is a numerical weather prediction forecast for the whole globe, with a resolution of approximately 0.09 degrees i.e. 10km (2,560 x 1,920 grid points).\n\nThe data is available as NetCDF files. It's offered on a free, unsupported basis, so we don't recommend using it for any critical business purposes.\n\n## Pressure Levels\nAvailable pressure levels, in Pascals (Pa), are:\n* 100000.0 97500.0 95000.0 92500.0 90000.0 85000.0 80000.0 75000.0 70000.0 65000.0 60000.0 55000.0 50000.0 45000.0 40000.0 37500.0 35000.0 32500.0 30000.0 27500.0 25000.0 22500.0 20000.0 17500.0 15000.0 12500.0 10000.0 7000.0 5000.0 4000.0 3000.0 2000.0 1000.0 500.0 200.0 100.0 40.0\n\n## Timesteps\nThe following timesteps are available:\n* every hour from 0 to 54 hours (for most parameters, see parameter table for exceptions)\n* every 3 hours from 57 to 144 hours\n* every 6 hours from 150 to 168 hours\n\n## Update Frequency\nThe model is run four times each day, with forecast reference times of 00:00, 06:00, 12:00 and 18:00 (UTC).\n\nThe runs at 00:00 and 12:00 provide data for the next 168 hours. The runs at 06:00 and 18:00 provide data for the next 67 hours.\n\nThe forecast reference time represents the nominal data time or start time of a model forecast run, rather than the time when the data is available.\n\n## Archive length and latency\nAs of December 2025, the archive contains data from December 2023 onwards. Forecasts will continue to be available for at least two years from their data date.\n\nThe data is typically available 6 hours after the model run time.\n\n## Technical specs\nThe data is available as NetCDF files. NetCDF (Network Common Data Form) is an interface for array-orientated data access and a library that supports the interface. It is composed of 3 components:\n* Variables store the data \n* Dimensions give relevant dimension information for the variables\n* Attributes provide auxiliary information about the variables or dataset itself \n\nNetCDF is used within the atmospheric and oceanic science communities and is network transparent, allowing for it to be accessed by computers that store integers, characters and floating-point numbers.\n\nIris supports NetCDF files through reading, writing and handling. Iris implements a model based on the CF conventions, giving a format-agnostic interface for working with data.\n\n[Find further support on using Iris with NetCDF files.](https://scitools-iris.readthedocs.io/en/stable/)\n\n## Help us improve the data services we offer\n[Join the Met Office research panel](https://forms.office.com/Pages/ResponsePage.aspx?id=YYHxF9cgRkeH_VD-PjtmGdxioYGoFbFIkZuB_q8Fb3VUQkoxRVQzTFdUMzNMVzczWVM5VTc3QTY3MC4u) to help us understand how people interact with weather and climate data, uncover challenges and explore opportunities.\n\n## How to cite\nMet Office global deterministic 10km forecast was accessed on DATE from the Microsoft Planetary Computer (https://zenodo.org/records/7261897).\n\n## License\nBritish Crown copyright 2023-2025, the Met Office, is licensed under [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.en).\n\n## Providers\n[Met Office](https://www.metoffice.gov.uk/)\n\nSee all datasets managed by [Met Office.](https://planetarycomputer.microsoft.com/catalog?filter=met+office)\n\n## Contact\n[servicedesk@metoffice.gov.uk](mailto:servicedesk@metoffice.gov.uk). Service desk is only available Mon \u2013 Fri, 09:00 until 17:00 UTC (-1 hour during BST). \n\nAs a non-operational service we aim to respond to any service support enquiries within 3-5 business days.\n",
+    "links": [
+        {
+            "rel": "items",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/met-office-global-deterministic-pressure/items",
+            "type": "application/geo+json"
+        },
+        {
+            "rel": "parent",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/",
+            "type": "application/json"
+        },
+        {
+            "rel": "root",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1",
+            "type": "application/json",
+            "title": "Microsoft Planetary Computer STAC API"
+        },
+        {
+            "rel": "self",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/met-office-global-deterministic-pressure",
+            "type": "application/json"
+        },
+        {
+            "rel": "license",
+            "href": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "type": "text/html",
+            "title": "Creative Commons Attribution-ShareAlike 4.0"
+        },
+        {
+            "rel": "describedBy",
+            "href": "https://www.metoffice.gov.uk/services/data/external-data-channels",
+            "title": "Met Office Dataset Documentation"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://planetarycomputer.microsoft.com/dataset/met-office-global-deterministic-pressure",
+            "type": "text/html",
+            "title": "Human readable dataset overview and reference"
+        },
+        {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/met-office-global-deterministic-pressure/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://planetarycomputer.microsoft.com/dataset/met-office-global-deterministic-pressure",
+            "type": "text/html",
+            "title": "Human readable dataset overview and reference"
+        }
+    ],
+    "stac_extensions": [
+        "https://stac-extensions.github.io/forecast/v0.2.0/schema.json",
+        "https://stac-extensions.github.io/datacube/v2.0.0/schema.json"
+    ],
+    "item_assets": {
+        "height_ASL_on_pressure_levels": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Height Above Sea Level on pressure levels",
+            "forecast:variable": "geopotential_height"
+        },
+        "wind_speed_on_pressure_levels": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Wind speed on pressure levels",
+            "forecast:variable": "wind_speed"
+        },
+        "temperature_on_pressure_levels": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Temperature on pressure levels",
+            "forecast:variable": "air_temperature"
+        },
+        "wind_direction_on_pressure_levels": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Wind direction on pressure levels",
+            "forecast:variable": "wind_from_direction"
+        },
+        "relative_humidity_on_pressure_levels": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Relative humidity on pressure levels",
+            "forecast:variable": "relative_humidity"
+        },
+        "geopotential_height_on_pressure_levels": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Geopotential height on pressure levels",
+            "forecast:variable": "geopotential_height"
+        },
+        "wind_vertical_velocity_on_pressure_levels": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Wind vertical velocity on pressure levels",
+            "forecast:variable": "upward_air_velocity"
+        },
+        "wet_bulb_potential_temperature_on_pressure_levels": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Wet bulb potential temperature on pressure levels",
+            "forecast:variable": "wet_bulb_potential_temperature"
+        }
+    },
+    "msft:region": "westeurope",
+    "msft:group_id": "met-office-global-deterministic",
+    "cube:variables": {
+        "wind_speed": {
+            "type": "data",
+            "unit": "m/s",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "pressure_levels",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Wind speed on pressure levels is defined as a two-dimensional (horizontal) air velocity vector with no vertical component. The speed is the magnitude of velocity."
+        },
+        "air_temperature": {
+            "type": "data",
+            "unit": "K",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "pressure_levels",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Air temperature on pressure levels"
+        },
+        "relative_humidity": {
+            "type": "data",
+            "unit": "1",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "pressure_levels",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Fractional relative humidity (ratio of the partial pressure of water vapour to the equilibrium vapour pressure of water) on pressure levels"
+        },
+        "geopotential_height": {
+            "type": "data",
+            "unit": "m",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "pressure_levels",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Height above sea level of the pressure levels. Note: from January 2026, this parameter will be replaced by geopotential_height_on_pressure_levels"
+        },
+        "upward_air_velocity": {
+            "type": "data",
+            "unit": "m/s",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "pressure_levels",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Speed of the vertical component of the air motion at a pressure levels. Upwards is positive and downwards is negative."
+        },
+        "wind_from_direction": {
+            "type": "data",
+            "unit": "degrees",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "pressure_levels",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Wind direction on pressure levels is defined as a two-dimensional (horizontal) air velocity vector with no vertical component. In meteorological reports the direction of the wind vector is given as the direction from which it is blowing."
+        },
+        "wet_bulb_potential_temperature": {
+            "type": "data",
+            "unit": "K",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "pressure_levels",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Wet bulb potential temperature on pressure levels. Wet bulb potential temperature is defined as the temperature that a parcel of air would have if it were brought down to the standard pressure of 1000hPa following a saturated adiabatic lapse rate."
+        }
+    },
+    "msft:container": "deterministic",
+    "cube:dimensions": {
+        "latitude": {
+            "axis": "y",
+            "type": "spatial",
+            "extent": [
+                -90,
+                90
+            ]
+        },
+        "longitude": {
+            "axis": "x",
+            "type": "spatial",
+            "extent": [
+                -180,
+                180
+            ]
+        },
+        "pressure_levels": {
+            "type": "spatial",
+            "values": [
+                100000,
+                97500,
+                95000,
+                92500,
+                90000,
+                85000,
+                80000,
+                75000,
+                70000,
+                6500,
+                60000,
+                55000,
+                50000,
+                45000,
+                40000,
+                37500,
+                35000,
+                32500,
+                30000,
+                27500,
+                25000,
+                22500,
+                20000,
+                17500,
+                15000,
+                12500,
+                10000,
+                7000,
+                5000,
+                4000,
+                3000,
+                2000,
+                1000
+            ]
+        },
+        "forecast:horizon": {
+            "type": "temporal",
+            "extent": [
+                null,
+                null
+            ],
+            "values": [
+                "PT0H",
+                "PT1H",
+                "PT2H",
+                "PT3H",
+                "PT4H",
+                "PT5H",
+                "PT6H",
+                "PT7H",
+                "PT8H",
+                "PT9H",
+                "PT10H",
+                "PT11H",
+                "PT12H",
+                "PT13H",
+                "PT14H",
+                "PT15H",
+                "PT16H",
+                "PT17H",
+                "PT18H",
+                "PT19H",
+                "PT20H",
+                "PT21H",
+                "PT22H",
+                "PT23H",
+                "PT24H",
+                "PT25H",
+                "PT26H",
+                "PT27H",
+                "PT28H",
+                "PT29H",
+                "PT30H",
+                "PT31H",
+                "PT32H",
+                "PT33H",
+                "PT34H",
+                "PT35H",
+                "PT36H",
+                "PT37H",
+                "PT38H",
+                "PT39H",
+                "PT40H",
+                "PT41H",
+                "PT42H",
+                "PT43H",
+                "PT44H",
+                "PT45H",
+                "PT46H",
+                "PT47H",
+                "PT48H",
+                "PT49H",
+                "PT50H",
+                "PT51H",
+                "PT52H",
+                "PT53H",
+                "PT54H",
+                "PT57H",
+                "PT60H",
+                "PT63H",
+                "PT66H",
+                "PT69H",
+                "PT72H",
+                "PT75H",
+                "PT78H",
+                "PT81H",
+                "PT84H",
+                "PT87H",
+                "PT90H",
+                "PT93H",
+                "PT96H",
+                "PT99H",
+                "PT102H",
+                "PT105H",
+                "PT108H",
+                "PT111H",
+                "PT114H",
+                "PT117H",
+                "PT120H",
+                "PT123H",
+                "PT126H",
+                "PT129H",
+                "PT132H",
+                "PT135H",
+                "PT138H",
+                "PT141H",
+                "PT144H",
+                "PT150H",
+                "PT156H",
+                "PT162H",
+                "PT168H"
+            ]
+        },
+        "forecast:reference_datetime": {
+            "type": "temporal",
+            "extent": [
+                "2023-12-15T00:00:00Z",
+                null
+            ]
+        }
+    },
+    "msft:storage_account": "ukmoeuwest",
+    "msft:short_description": "Met Office Global Deterministic Pressure Level",
+    "title": "Pressure levels collection Met Office Global 10km deterministic weather forecast",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -180,
+                    -90,
+                    180,
+                    90
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2023-12-15T00:00:00Z",
+                    null
+                ]
+            ]
+        }
+    },
+    "license": "proprietary",
+    "keywords": [
+        "MetOffice",
+        "Global",
+        "Cloud"
+    ],
+    "providers": [
+        {
+            "name": "Met Office",
+            "roles": [
+                "producer",
+                "licensor",
+                "processor"
+            ],
+            "url": "https://www.metoffice.gov.uk/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/met-office-global-deterministic-pressure.jpg",
+            "type": "image/jpeg",
+            "title": "Pressure levels collection Met Office Global 10km deterministic weather forecast thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/met-office-global-deterministic-pressure.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
+}

@@ -38,6 +38,12 @@
             "title": "Eclipse: An End-to-End Platform for Low-Cost, Hyperlocal Environment Sensing in Cities"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/eclipse/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/eclipse",
             "type": "text/html",

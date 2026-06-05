@@ -43,6 +43,12 @@
             "title": "Project homepage"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/cil-gdpcir-cc0/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/cil-gdpcir-cc0",
             "type": "text/html",

@@ -36,6 +36,12 @@
             "title": "Public Domain"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-c2-l1/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/landsat-c2-l1",
             "type": "text/html",

@@ -35,6 +35,12 @@
             "href": "https://doi.org/10.3334/ORNLDAAC/1840"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/daymet-daily-na/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/daymet-daily-na",
             "type": "text/html",

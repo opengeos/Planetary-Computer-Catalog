@@ -56,6 +56,12 @@
             "href": "https://doi.org/10.5066/P9C46NG0"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/usgs-lcmap-conus-v13/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/usgs-lcmap-conus-v13",
             "type": "text/html",

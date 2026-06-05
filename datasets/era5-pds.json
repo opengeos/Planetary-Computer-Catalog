@@ -48,6 +48,18 @@
             "href": "https://planetarycomputer.microsoft.com/dataset/era5-pds",
             "type": "text/html",
             "title": "Human readable dataset overview and reference"
+        },
+        {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/era5-pds/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://planetarycomputer.microsoft.com/dataset/era5-pds",
+            "type": "text/html",
+            "title": "Human readable dataset overview and reference"
         }
     ],
     "stac_extensions": [
@@ -251,6 +263,7 @@
             }
         }
     },
+    "msft:region": "westeurope",
     "cube:variables": {
         "time1_bounds": {
             "type": "data",
@@ -584,8 +597,8 @@
             "step": -0.25,
             "type": "spatial",
             "extent": [
-                -90.0,
-                90.0
+                -90,
+                90
             ],
             "description": "latitude",
             "reference_system": "epsg:4326"
@@ -595,7 +608,7 @@
             "step": 0.25,
             "type": "spatial",
             "extent": [
-                0.0,
+                0,
                 359.75
             ],
             "description": "longitude",
@@ -612,7 +625,6 @@
     },
     "msft:storage_account": "cpdataeuwest",
     "msft:short_description": "A comprehensive reanalysis, which assimilates as many observations as possible in the upper air and near surface.",
-    "msft:region": "westeurope",
     "title": "ERA5 - PDS",
     "extent": {
         "spatial": {
@@ -678,6 +690,15 @@
             "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/era5-thumbnail.png",
             "type": "image/png",
             "title": "Thumbnail"
+        },
+        "era5-static-var": {
+            "href": "https://cpdataeuwest.blob.core.windows.net/era5/era5_static.nc",
+            "type": "application/netcdf",
+            "title": "ERA5 static variables",
+            "description": "ERA5 static variables (geopotential z, land-sea mask lsm, soil type slt) from the Copernicus Climate Change Service (C3S) Climate Data Store (CDS), licensed under CC BY (https://spdx.org/licenses/CC-BY-4.0) (DOI: 10.24381/cds.adbb2d47; accessed 2026-02-03). Attribution per CDS guidance.",
+            "roles": [
+                "data"
+            ]
         },
         "geoparquet-items": {
             "href": "abfs://items/era5-pds.parquet",

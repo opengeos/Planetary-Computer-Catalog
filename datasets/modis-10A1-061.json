@@ -41,6 +41,12 @@
             "title": "Use and Copyright | National Snow and Ice Data Center"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/modis-10A1-061/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/modis-10A1-061",
             "type": "text/html",

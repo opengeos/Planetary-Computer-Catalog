@@ -68,6 +68,12 @@
             "title": "2021 Product Version 2.0.0 Validation Report"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/esa-worldcover/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/esa-worldcover",
             "type": "text/html",

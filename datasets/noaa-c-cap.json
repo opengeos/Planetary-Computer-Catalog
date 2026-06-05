@@ -50,6 +50,12 @@
             "title": "C-CAP Regional Land Cover and Change"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/noaa-c-cap/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/noaa-c-cap",
             "type": "text/html",

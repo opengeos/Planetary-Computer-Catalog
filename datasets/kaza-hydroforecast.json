@@ -32,6 +32,12 @@
             "title": "Community Data License Agreement \u2013 Sharing, Version 1.0"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/kaza-hydroforecast/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/kaza-hydroforecast",
             "type": "text/html",

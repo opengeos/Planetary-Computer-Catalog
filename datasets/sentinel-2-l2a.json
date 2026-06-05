@@ -31,6 +31,12 @@
             "title": "Copernicus Sentinel data terms"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-2-l2a/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/sentinel-2-l2a",
             "type": "text/html",

@@ -39,6 +39,12 @@
             "title": "JAXA Terms of Use of Research Data"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/alos-fnf-mosaic/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/alos-fnf-mosaic",
             "type": "text/html",

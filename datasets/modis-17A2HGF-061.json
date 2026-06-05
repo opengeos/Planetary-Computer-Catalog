@@ -56,6 +56,12 @@
             "title": "LP DAAC - Data Citation and Policies"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/modis-17A2HGF-061/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/modis-17A2HGF-061",
             "type": "text/html",

@@ -66,6 +66,12 @@
             "href": "https://doi.org/10.24381/cds.006f2c9a"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/esa-cci-lc/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/esa-cci-lc",
             "type": "text/html",

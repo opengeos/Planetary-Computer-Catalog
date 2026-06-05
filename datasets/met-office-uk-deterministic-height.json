@@ -1,0 +1,373 @@
+{
+    "type": "Collection",
+    "id": "met-office-uk-deterministic-height",
+    "stac_version": "1.1.0",
+    "description": "This collection offers 4 parameters at 33 available height levels (5m to 6000m) from the Met Office UKV 2km deterministic forecast. This is a high-resolution gridded weather forecast for the UK, with a resolution of 0.018 degrees, projected on to a 2km horizontal grid. The data is available as NetCDF files.\n\n## Height Levels\nAvailable height levels, in metres (m) above ground, are: \n* 5.0 10.0 20.0 30.0 40.0 50.0 60.0 75.0 100.0 125.0 150.0 175.0 200.0 225.0 250.0 275.0 300.0 350.0 400.0 450.0 500.0 600.0 700.0 800.0 900.0 1000.0 1125.0 1250.0 1375.0 1500.0 1625.0 1750.0 1875.0 2000.0 2125.0 2250.0 2375.0 2500.0 2625.0 2750.0 2875.0 3000.0 3125.0 3250.0 3375.0 3500.0 3625.0 3750.0 3875.0 4000.0 4500.0 5000.0 5500.0 6000.0 6750.0 7500.0\n\n## Coverage area\nThe forecast covers the UK and Ireland, with the following latitude and longitude coordinates for each corner of the included area:\n* Southwest: 48.8643\u00b0N, 10.6734\u00b0W \n* Northwest: 61.3322\u00b0N, 13.7254\u00b0W \n* Northeast: 61.6102\u00b0N, 4.3408\u00b0E \n* Southeast: 49.0594\u00b0N, 2.4654\u00b0E \n\n## Timesteps\nThe following time steps are available:\n* every hour from 0 to 54 hours\n* every 3 hours from 57 to 120 hours \n \n## Update frequency\nThere are three lengths of model run, each with its own update frequency: \n* Nowcast: forecasts the next 12 hours and are at 0100, 0200, 0400, 0500, 0700, 0800, 1000, 1100, 1300, 1400, 1600, 1700, 1900, 2000, 2200 and 2300 UTC. \n* Short: forecasts the next 54 hours and are at 0000, 0600, 0900, 1200, 1800 and 2100 UTC. \n* Medium: forecasts the next 120 hours and are at 0300 and 1500 UTC.\n\n## Archive length and latency\n\nAs of December 2025, the archive contains data from December 2023 onwards. Forecasts will continue to be available for at least two years from their data date.\n\nThe data is typically available 3-6 hours after the model run time.\n\n## Technical specs\nThe data is available as NetCDF files. NetCDF (Network Common Data Form) is an interface for array-orientated data access and a library that supports the interface. It is composed of 3 components:\n* variables store the data\n* dimensions give relevant dimension information for the variables\n* attributes provide auxiliary information about the variables or dataset itself\n\nNetCDF is used within the atmospheric and oceanic science communities and is network transparent, allowing for it to be accessed by computers that store integers, characters and floating-point numbers.\n\nIris supports NetCDF files through reading, writing and handling. Iris implements a model based on the CF conventions, giving a format-agnostic interface for working with data.\n\n[Find further support on using Iris with NetCDF files.](https://scitools-iris.readthedocs.io/en/stable/) \n\n## Help us improve the data services we offer\n\n[Join the Met Office research panel](https://forms.office.com/Pages/ResponsePage.aspx?id=YYHxF9cgRkeH_VD-PjtmGdxioYGoFbFIkZuB_q8Fb3VUQkoxRVQzTFdUMzNMVzczWVM5VTc3QTY3MC4u) to help us understand how people interact with weather and climate data, uncover challenges and explore opportunities.\n\n## How to cite\n\nUKV 2km deterministic forecast was accessed on DATE from the Microsoft Planetary Computer (https://zenodo.org/records/7261897).\n\n## License\n\nBritish Crown copyright 2023-2025, the Met Office, is licensed under [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.en).\n\n## Providers\n[Met Office](https://www.metoffice.gov.uk/)\n\nSee all datasets managed by [Met Office.](https://planetarycomputer.microsoft.com/catalog?filter=met+office)\n\n## Contact\n[servicedesk@metoffice.gov.uk](mailto:servicedesk@metoffice.gov.uk). Service desk is only available Mon \u2013 Fri, 09:00 until 17:00 UTC (-1 hour during BST). \n\nAs a non-operational service we aim to respond to any service support enquiries within 3-5 business days.\n",
+    "links": [
+        {
+            "rel": "items",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/met-office-uk-deterministic-height/items",
+            "type": "application/geo+json"
+        },
+        {
+            "rel": "parent",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/",
+            "type": "application/json"
+        },
+        {
+            "rel": "root",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1",
+            "type": "application/json",
+            "title": "Microsoft Planetary Computer STAC API"
+        },
+        {
+            "rel": "self",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/met-office-uk-deterministic-height",
+            "type": "application/json"
+        },
+        {
+            "rel": "license",
+            "href": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "type": "text/html",
+            "title": "Creative Commons Attribution-ShareAlike 4.0"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://www.metoffice.gov.uk/services/data/external-data-channels",
+            "title": "Met Office Dataset Documentation"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://planetarycomputer.microsoft.com/dataset/met-office-uk-deterministic-height",
+            "type": "text/html",
+            "title": "Human readable dataset overview and reference"
+        },
+        {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/met-office-uk-deterministic-height/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://planetarycomputer.microsoft.com/dataset/met-office-uk-deterministic-height",
+            "type": "text/html",
+            "title": "Human readable dataset overview and reference"
+        }
+    ],
+    "stac_extensions": [
+        "https://stac-extensions.github.io/forecast/v0.2.0/schema.json",
+        "https://stac-extensions.github.io/datacube/v2.0.0/schema.json"
+    ],
+    "item_assets": {
+        "wind_speed_on_height_levels": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Wind speed on height levels",
+            "forecast:variable": "wind_speed"
+        },
+        "temperature_on_height_levels": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Temperature on height levels",
+            "forecast:variable": "air_temperature"
+        },
+        "cloud_amount_on_height_levels": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Cloud amount on height levels",
+            "forecast:variable": "cloud_volume_fraction_in_atmosphere_layer"
+        },
+        "wind_direction_on_height_levels": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Wind direction on height levels",
+            "forecast:variable": "wind_from_direction"
+        }
+    },
+    "msft:region": "westeurope",
+    "msft:group_id": "met-office-uk-deterministic",
+    "cube:variables": {
+        "wind_speed": {
+            "type": "data",
+            "unit": "m/s",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "height",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Wind speed on height levels is defined as a two-dimensional (horizontal) air velocity vector with no vertical component. The speed is the magnitude of velocity."
+        },
+        "air_temperature": {
+            "type": "data",
+            "unit": "K",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "height",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Air temperature on height levels."
+        },
+        "wind_from_direction": {
+            "type": "data",
+            "unit": "degrees",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "height",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Wind direction on height levels is defined as a two-dimensional (horizontal) air velocity vector with no vertical component. In meteorological reports the direction of the wind vector is given as the direction from which it is blowing."
+        },
+        "cloud_volume_fraction_in_atmosphere_layer": {
+            "type": "data",
+            "unit": "1",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "height",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Fraction of horizontal grid square occupied by cloud in layers centred on height levels."
+        }
+    },
+    "msft:container": "deterministic",
+    "cube:dimensions": {
+        "height": {
+            "type": "spatial",
+            "values": [
+                5,
+                10,
+                20,
+                30,
+                50,
+                75,
+                100,
+                150,
+                200,
+                250,
+                300,
+                400,
+                500,
+                600,
+                700,
+                800,
+                1000,
+                1250,
+                1500,
+                1750,
+                2000,
+                2250,
+                2500,
+                2750,
+                3000,
+                3250,
+                3500,
+                3750,
+                4000,
+                4500,
+                5000,
+                5500,
+                6000
+            ]
+        },
+        "latitude": {
+            "axis": "y",
+            "type": "spatial",
+            "extent": [
+                50,
+                62
+            ]
+        },
+        "longitude": {
+            "axis": "x",
+            "type": "spatial",
+            "extent": [
+                5,
+                15
+            ]
+        },
+        "forecast:horizon": {
+            "type": "temporal",
+            "extent": [
+                null,
+                null
+            ],
+            "values": [
+                "PT0H",
+                "PT1H",
+                "PT2H",
+                "PT3H",
+                "PT4H",
+                "PT5H",
+                "PT6H",
+                "PT7H",
+                "PT8H",
+                "PT9H",
+                "PT10H",
+                "PT11H",
+                "PT12H",
+                "PT13H",
+                "PT14H",
+                "PT15H",
+                "PT16H",
+                "PT17H",
+                "PT18H",
+                "PT19H",
+                "PT20H",
+                "PT21H",
+                "PT22H",
+                "PT23H",
+                "PT24H",
+                "PT25H",
+                "PT26H",
+                "PT27H",
+                "PT28H",
+                "PT29H",
+                "PT30H",
+                "PT31H",
+                "PT32H",
+                "PT33H",
+                "PT34H",
+                "PT35H",
+                "PT36H",
+                "PT37H",
+                "PT38H",
+                "PT39H",
+                "PT40H",
+                "PT41H",
+                "PT42H",
+                "PT43H",
+                "PT44H",
+                "PT45H",
+                "PT46H",
+                "PT47H",
+                "PT48H",
+                "PT49H",
+                "PT50H",
+                "PT51H",
+                "PT52H",
+                "PT53H",
+                "PT54H",
+                "PT57H",
+                "PT60H",
+                "PT63H",
+                "PT66H",
+                "PT69H",
+                "PT72H",
+                "PT75H",
+                "PT78H",
+                "PT81H",
+                "PT84H",
+                "PT87H",
+                "PT90H",
+                "PT93H",
+                "PT96H",
+                "PT99H",
+                "PT102H",
+                "PT105H",
+                "PT108H",
+                "PT111H",
+                "PT114H",
+                "PT117H",
+                "PT120H"
+            ]
+        },
+        "forecast:reference_datetime": {
+            "type": "temporal",
+            "extent": [
+                "2023-12-15T00:00:00Z",
+                null
+            ]
+        }
+    },
+    "msft:storage_account": "ukmoeuwest",
+    "msft:short_description": "Met Office UK Deterministic Height Level",
+    "title": "Height levels collection Met Office UKV 2km deterministic forecast",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -13.7254,
+                    48.8643,
+                    4.3408,
+                    61.6102
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2023-12-15T00:00:00Z",
+                    null
+                ]
+            ]
+        }
+    },
+    "license": "proprietary",
+    "keywords": [
+        "Met Office",
+        "Weather",
+        "Forecast",
+        "UK",
+        "Cloud",
+        "Temperature",
+        "Wind",
+        "Height"
+    ],
+    "providers": [
+        {
+            "name": "Met Office",
+            "roles": [
+                "producer",
+                "licensor",
+                "processor"
+            ],
+            "url": "https://www.metoffice.gov.uk/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/met-office-uk-deterministic-height.jpg",
+            "type": "image/jpeg",
+            "title": "Height levels collection Met Office UKV 2km deterministic forecast thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/met-office-uk-deterministic-height.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
+}

@@ -38,6 +38,12 @@
             "title": "Community Data License Agreement - Permissive, Version 1.0"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/deltares-water-availability/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/deltares-water-availability",
             "type": "text/html",

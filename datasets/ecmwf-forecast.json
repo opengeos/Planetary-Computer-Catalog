@@ -38,6 +38,12 @@
             "title": "ECMWF Open Data (Real Time) documentation"
         },
         {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/ecmwf-forecast/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
             "rel": "describedby",
             "href": "https://planetarycomputer.microsoft.com/dataset/ecmwf-forecast",
             "type": "text/html",

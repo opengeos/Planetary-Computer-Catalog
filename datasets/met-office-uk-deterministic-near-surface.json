@@ -1,0 +1,844 @@
+{
+    "type": "Collection",
+    "id": "met-office-uk-deterministic-near-surface",
+    "stac_version": "1.1.0",
+    "description": "This collection offers 35 parameters at near-surface level from the Met Office UKV 2km deterministic forecast. This is a high-resolution gridded weather forecast for the UK, with a resolution of 0.018 degrees, projected on to a 2km horizontal grid.\n\nThe data is available as NetCDF files. It's offered on a free, unsupported basis, so we don't recommend using it for any critical business purposes. \n\n## Coverage area\nThe forecast covers the UK and Ireland, with the following latitude and longitude coordinates for each corner of the included area: \n* Southwest: 48.8643\u00b0N, 10.6734\u00b0W \n* Northwest: 61.3322\u00b0N, 13.7254\u00b0W \n* Northeast: 61.6102\u00b0N, 4.3408\u00b0E \n* Southeast: 49.0594\u00b0N, 2.4654\u00b0E \n\n## Data collection height\nThere are 3 forecast heights used within the near-surface this collection:\n* Surface: the default collection height\n* Screen level: 1.5m above the surface\n* Wind parameters: 10m above the surface\n\n## Timesteps\nFor most parameters, the following time steps are available, see exceptions below:\n* every hour from 0 to 54 hours\n* every 3 hours from 57 to 120 hours\n\nExceptions (for `rate`, `accumulation`, `min` and `max` parameters):\n* Hourly hail fall accumulation (hail_fall_accumulation-PT01H) is only available every hour from 1 to 54 hours\n* Hail fall rate (hail_fall_rate) has 15 minutely timesteps from 0 to 54 hours\n* Hourly precipitation accumulation (precipitation_accumulation-PT01H) is only available every hour from 1 to 54 hours\n* 3H precipitation accumulation (precipitation_accumulation-PT03H) is only available every three hours from 57 to 120 hours\n* Precipitation rate (precipitation_rate) has 15 minutely timesteps from 0 to 54 hours\n* Pressure at mean sea level (pressure_at_mean_sea_level) has 15 minutely timesteps from 0 to 12 hours, hourly timesteps from 13 to 54 hours and 3 hourly timesteps from 57 to 120 hours\n* Hourly rainfall accumulation (rainfall_accumulation-PT01H) is only available every hour from 1 to 54 hours\n* 3H rainfall accumulation (rainfall_accumulation-PT03H) is only available every three hours from 57 to 120 hours\n* Rainfall rate (rainfall_rate) has 15 minutely timesteps from 0 to 54 hours\n* Hourly snowfall accumulation (snowfall_accumulation-PT01H) is only available every hour from 1 to 54 hours\n* 3H snowfall accumulation (snowfall_accumulation-PT03H) is only available every three hours from 57 to 120 hours\n* Snowfall rate (snowfall_rate) has 15 minutely timesteps from 0 to 54 hours\n* Temperature at screen level (temperature_at_screen_level) has 15 minutely timesteps from 0 to 12 hours and hourly timesteps from 13 to 120 hours\n* Hourly temperature at screen level maximum (temperature_at_screen_level_max-PT01H) is only available every hour from 1 to 120 hours\n* Hourly temperature at screen level minimum (temperature_at_screen_level_min-PT01H) is only available every hour from 1 to 120 hours\n* Dew point temperature at screen level (temperature_of_dew_point_at_screen_level) has 15 minutely timesteps from 0 to 12 hours, hourly timesteps from 13 to 54 hours and 3 hourly timesteps from 57 to 120 hours\n* Visibility at screen level (visibility_at_screen_level) has 15 minutely timesteps from 0 to 12 hours, hourly timesteps from 13 to 54 hours and 3 hourly timesteps from 57 to 120 hours\n* Wind direction at 10m (wind_direction_at_10m) has 15 minutely timesteps from 0 to 12 hours, hourly timesteps from 13 to 54 hours and 3 hourly timesteps from 57 to 120 hours\n* Wind gust at 10m (wind_gust_at_10m) has 15 minutely timesteps from 0 to 12 hours, hourly timesteps from 13 to 54 hours and 3 hourly timesteps from 57 to 120 hours\n* Hourly wind gust at 10m maximum (wind_gust_at_10m_max-PT01H) is only available every hour from 1 to 54 hours\n* 3H wind gust at 10m maximum(wind_gust_at_10m_max-PT03H) is only available every three hours from 57 to 120 hours\n* Wind speed at 10m (wind_speed_at_10m) has 15 minutely timesteps from 0 to 12 hours, hourly timesteps from 13 to 54 hours and 3 hourly timesteps from 57 to 120 hours\n \n## Update frequency\nThere are three lengths of model run, each with its own update frequency: \n* Nowcast: forecasts the next 12 hours and are at 0100, 0200, 0400, 0500, 0700, 0800, 1000, 1100, 1300, 1400, 1600, 1700, 1900, 2000, 2200 and 2300 UTC. \n* Short: forecasts the next 54 hours and are at 0000, 0600, 0900, 1200, 1800 and 2100 UTC. \n* Medium: forecasts the next 120 hours and are at 0300 and 1500 UTC.\n\n## Archive length and latency\nAs of December 2025, the archive contains data from December 2023 onwards. Forecasts will continue to be available for at least two years from their data date. \n\nThe data is typically available 3-6 hours after the model run time.\n\n## Technical specs\nThe data is available as NetCDF files. NetCDF (Network Common Data Form) is an interface for array-orientated data access and a library that supports the interface. It is composed of 3 components: \n* variables store the data \n* dimensions give relevant dimension information for the variables \n* attributes provide auxiliary information about the variables or dataset itself \n\nNetCDF is used within the atmospheric and oceanic science communities and is network transparent, allowing for it to be accessed by computers that store integers, characters and floating-point numbers.  \n\nIris supports NetCDF files through reading, writing and handling. Iris implements a model based on the CF conventions, giving a format-agnostic interface for working with data. \n\n[Find further support on using Iris with NetCDF files.](https://scitools-iris.readthedocs.io/en/stable/) \n\n## Help us improve the data services we offer\n[Join the Met Office research panel](https://forms.office.com/Pages/ResponsePage.aspx?id=YYHxF9cgRkeH_VD-PjtmGdxioYGoFbFIkZuB_q8Fb3VUQkoxRVQzTFdUMzNMVzczWVM5VTc3QTY3MC4u) to help us understand how people interact with weather and climate data, uncover challenges and explore opportunities.  \n\n## How to cite\nUKV 2km deterministic forecast was accessed on DATE from the Microsoft Planetary Computer (https://zenodo.org/records/7261897). \n\n## License\nBritish Crown copyright 2023-2025, the Met Office, is licensed under [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.en).\n\n## Providers\n[Met Office](https://www.metoffice.gov.uk/)\n\nSee all datasets managed by [Met Office.](https://planetarycomputer.microsoft.com/catalog?filter=met+office)\n\n## Contact\n[servicedesk@metoffice.gov.uk](mailto:servicedesk@metoffice.gov.uk). Service desk is only available Mon \u2013 Fri, 09:00 until 17:00 UTC (-1 hour during BST). \n\nAs a non-operational service we aim to respond to any service support enquiries within 3-5 business days.\n",
+    "links": [
+        {
+            "rel": "items",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/met-office-uk-deterministic-near-surface/items",
+            "type": "application/geo+json"
+        },
+        {
+            "rel": "parent",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/",
+            "type": "application/json"
+        },
+        {
+            "rel": "root",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1",
+            "type": "application/json",
+            "title": "Microsoft Planetary Computer STAC API"
+        },
+        {
+            "rel": "self",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/met-office-uk-deterministic-near-surface",
+            "type": "application/json"
+        },
+        {
+            "rel": "license",
+            "href": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "type": "text/html",
+            "title": "Creative Commons Attribution-ShareAlike 4.0"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://www.metoffice.gov.uk/services/data/external-data-channels",
+            "title": "Met Office Dataset Documentation"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://planetarycomputer.microsoft.com/dataset/met-office-uk-deterministic-near-surface",
+            "type": "text/html",
+            "title": "Human readable dataset overview and reference"
+        },
+        {
+            "rel": "http://www.opengis.net/def/rel/ogc/1.0/queryables",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/met-office-uk-deterministic-near-surface/queryables",
+            "type": "application/schema+json",
+            "title": "Queryables"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://planetarycomputer.microsoft.com/dataset/met-office-uk-deterministic-near-surface",
+            "type": "text/html",
+            "title": "Human readable dataset overview and reference"
+        }
+    ],
+    "stac_extensions": [
+        "https://stac-extensions.github.io/forecast/v0.2.0/schema.json",
+        "https://stac-extensions.github.io/datacube/v2.0.0/schema.json"
+    ],
+    "item_assets": {
+        "landsea_mask": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Landsea mask",
+            "forecast:variable": "land_binary_mask"
+        },
+        "rainfall_rate": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Rainfall rate",
+            "forecast:variable": "rainfall_rate"
+        },
+        "snowfall_rate": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Snowfall rate",
+            "forecast:variable": "lwe_snowfall_rate"
+        },
+        "hail_fall_rate": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Hail fall rate",
+            "forecast:variable": "lwe_graupel_and_hail_fall_rate"
+        },
+        "wind_gust_at_10m": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Wind gust at 10m",
+            "forecast:variable": "wind_speed_of_gust"
+        },
+        "wind_speed_at_10m": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Wind speed at 10m",
+            "forecast:variable": "wind_speed"
+        },
+        "precipitation_rate": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Precipitation rate",
+            "forecast:variable": "lwe_precipitation_rate"
+        },
+        "height_of_orography": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Height of orography",
+            "forecast:variable": "surface_altitude"
+        },
+        "pressure_at_surface": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Pressure at surface",
+            "forecast:variable": "surface_air_pressure"
+        },
+        "wind_direction_at_10m": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Wind direction at 10m",
+            "forecast:variable": "wind_from_direction"
+        },
+        "temperature_at_surface": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Temperature at surface",
+            "forecast:variable": "surface_temperature"
+        },
+        "pressure_at_mean_sea_level": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Pressure at mean sea level",
+            "forecast:variable": "air_pressure_at_sea_level"
+        },
+        "visibility_at_screen_level": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Visibility at screen level",
+            "forecast:variable": "visibility_in_air"
+        },
+        "wind_gust_at_10m_max-PT01H": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Hourly wind gust at 10m maximum",
+            "forecast:variable": "wind_speed_of_gust"
+        },
+        "wind_gust_at_10m_max-PT03H": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "3H wind gust at 10m maximum",
+            "forecast:variable": "wind_speed_of_gust"
+        },
+        "rainfall_accumulation-PT01H": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Hourly rainfall accumulation",
+            "forecast:variable": "thickness_of_rainfall_amount"
+        },
+        "rainfall_accumulation-PT03H": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "3H rainfall accumulation",
+            "forecast:variable": "thickness_of_rainfall_amount"
+        },
+        "snow_depth_water_equivalent": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Snow depth water equivalent",
+            "forecast:variable": "lwe_thickness_of_surface_snow_amount"
+        },
+        "snowfall_accumulation-PT01H": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Hourly snowfall accumulation",
+            "forecast:variable": "lwe_thickness_of_snowfall_amount"
+        },
+        "snowfall_accumulation-PT03H": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "3H snowfall accumulation",
+            "forecast:variable": "lwe_thickness_of_snowfall_amount"
+        },
+        "temperature_at_screen_level": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Temperature at screen level",
+            "forecast:variable": "air_temperature"
+        },
+        "fog_fraction_at_screen_level": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Fog fraction at screen level",
+            "forecast:variable": "fog_area_fraction"
+        },
+        "hail_fall_accumulation-PT01H": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Hourly hail fall accumulation",
+            "forecast:variable": "lwe_thickness_of_graupel_and_hail_fall_amount"
+        },
+        "sensible_heat_flux_at_surface": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Sensible heat flux at surface",
+            "forecast:variable": "surface_upward_sensible_heat_flux"
+        },
+        "precipitation_accumulation-PT01H": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Hourly precipitation accumulation",
+            "forecast:variable": "lwe_thickness_of_precipitation_amount"
+        },
+        "precipitation_accumulation-PT03H": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "3H precipitation accumulation",
+            "forecast:variable": "lwe_thickness_of_precipitation_amount"
+        },
+        "relative_humidity_at_screen_level": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Relative humidity at screen level",
+            "forecast:variable": "relative_humidity"
+        },
+        "temperature_at_screen_level_max-PT01H": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Hourly temperature at screen level maximum",
+            "forecast:variable": "air_temperature"
+        },
+        "temperature_at_screen_level_min-PT01H": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Hourly temperature at screen level minimum",
+            "forecast:variable": "air_temperature"
+        },
+        "radiation_flux_in_uv_downward_at_surface": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Radiation flux in uv downward at surface",
+            "forecast:variable": "surface_downwelling_ultraviolet_flux_in_air"
+        },
+        "temperature_of_dew_point_at_screen_level": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Dew point temperature at screen level",
+            "forecast:variable": "dew_point_temperature"
+        },
+        "radiation_flux_in_longwave_downward_at_surface": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Radiation flux in longwave downward at surface",
+            "forecast:variable": "surface_downwelling_longwave_flux_in_air"
+        },
+        "radiation_flux_in_shortwave_total_downward_at_surface": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Radiation flux in shortwave total downward at surface",
+            "forecast:variable": "surface_downwelling_shortwave_flux_in_air"
+        },
+        "radiation_flux_in_shortwave_direct_downward_at_surface": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Radiation flux in shortwave direct downward at surface",
+            "forecast:variable": "surface_direct_downwelling_shortwave_flux_in_air"
+        },
+        "radiation_flux_in_shortwave_diffuse_downward_at_surface": {
+            "type": "application/netcdf",
+            "roles": [
+                "data"
+            ],
+            "title": "Radiation flux in shortwave diffuse downward at surface",
+            "forecast:variable": "surface_diffusive_downwelling_shortwave_flux_in_air"
+        }
+    },
+    "msft:region": "westeurope",
+    "msft:group_id": "met-office-uk-deterministic",
+    "cube:variables": {
+        "wind_speed": {
+            "type": "data",
+            "unit": "m/s",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Wind at 10m above the surface is defined as a two-dimensional (horizontal) air velocity vector with no vertical component. The speed is the magnitude of velocity."
+        },
+        "rainfall_rate": {
+            "type": "data",
+            "unit": "m/s",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Instantaneous rate at which rain (as a depth) was being produced by the model precipitation scheme and deposited on the surface. This excludes the rain produced by the model convection scheme."
+        },
+        "air_temperature": {
+            "type": "data",
+            "unit": "K",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Minimum instantaneous air temperature at screen level (1.5m) in the previous hour."
+        },
+        "land_binary_mask": {
+            "type": "data",
+            "unit": "1",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Binary indicator of whether a  point is considered land (value = 1) or sea (value = 0). This is useful to identify the coastline and characterise points for correct interpretation of forecast data by users."
+        },
+        "surface_altitude": {
+            "type": "data",
+            "unit": "m",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Altitude or (geometric) height above the geoid of the surface (ground). It is worth remembering that orographic height can be negative, particularly in some of the inland sea areas (e.g. Caspian Sea at -27m and Dead Sea at -430m)."
+        },
+        "fog_area_fraction": {
+            "type": "data",
+            "unit": "1",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Here fog means a visibility of 1000 m or lower. The reduction in visibility is caused by  water droplets or minute ice crystals forming close to the surface. This quantity represents the fraction of horizontal  grid square occupied by fog. An alternative interpretation is that this represents the fractional probability of fog being present at any location in the grid square."
+        },
+        "lwe_snowfall_rate": {
+            "type": "data",
+            "unit": "m/s",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Instantaneous rate at which liquid water equivalent (LWE) snow (as a depth) was produced by the model precipitation scheme and deposited on the surface. This excludes the snow produced by the  model convection scheme."
+        },
+        "relative_humidity": {
+            "type": "data",
+            "unit": "1",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Fractional relative humidity (ratio of the partial pressure of water vapour to the equilibrium vapour pressure of water) at screen level (1.5m above the surface.)"
+        },
+        "visibility_in_air": {
+            "type": "data",
+            "unit": "m",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Horizontal distance at which something can be seen horizontally from screen level (1.5m)."
+        },
+        "wind_speed_of_gust": {
+            "type": "data",
+            "unit": "m/s",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Maximum diagnosed instantaneous wind gust at 10m in the previous 3 hours. This can be considered as the extreme wind speed that might be experienced in this period."
+        },
+        "surface_temperature": {
+            "type": "data",
+            "unit": "K",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Temperature at the surface interface between the air and the ground."
+        },
+        "wind_from_direction": {
+            "type": "data",
+            "unit": "degrees",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Wind at 10m above the surface is defined as a two-dimensional (horizontal) air velocity vector with no vertical component. In meteorological reports the direction of the wind vector is given as the direction from which it is blowing. Note: This with wind speed at 10m replaces x wind at 10m and y wind at 10m."
+        },
+        "surface_air_pressure": {
+            "type": "data",
+            "unit": "Pa",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Air pressure at the surface (lower boundary of the atmosphere)."
+        },
+        "dew_point_temperature": {
+            "type": "data",
+            "unit": "K",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Instantaneous dew point temperature (temperature at which a parcel of air reaches saturation upon being cooled at constant pressure and specific humidity) at screen level (1.5m)."
+        },
+        "lwe_precipitation_rate": {
+            "type": "data",
+            "unit": "m/s",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Instantaneous rate at which liquid water (as a depth) was being deposited on the surface. This includes rain, snow and hail with the ice phase precipitation being considered as a liquid water equivalent (LWE)  value. It includes the contribution from the model convection scheme if this is invoked."
+        },
+        "air_pressure_at_sea_level": {
+            "type": "data",
+            "unit": "Pa",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Air pressure at mean sea level which is close to the geoid in sea areas. Air pressure at sea level is the quantity often abbreviated as MSLP or PMSL."
+        },
+        "thickness_of_rainfall_amount": {
+            "type": "data",
+            "unit": "m",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Implied depth of the rain produced by the model precipitation scheme which has been deposited on the surface in the previous 3 hours. This excludes the rain produced by the model convection scheme."
+        },
+        "lwe_graupel_and_hail_fall_rate": {
+            "type": "data",
+            "unit": "m/s",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Instantaneous rate at which liquid water equivalent (LWE) hail (as a depth) has been produced by the model precipitation scheme and deposited on the surface."
+        },
+        "lwe_thickness_of_snowfall_amount": {
+            "type": "data",
+            "unit": "m",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Implied depth of the (LWE) snow (as a depth) produced by the model precipitation scheme and deposited on the surface in the previous 3 hours. This excludes the snow produced by the model  convection scheme."
+        },
+        "surface_upward_sensible_heat_flux": {
+            "type": "data",
+            "unit": "W/m2",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Exchange of heat between the surface and the air by motion of air, also called turbulent heat flux."
+        },
+        "lwe_thickness_of_surface_snow_amount": {
+            "type": "data",
+            "unit": "m",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Liquid water equivalent (LWE) depth of the snow lying on the surface (ground). Typically water is 10 times as dense as snow, so multiplying by 10 gives an approximate depth of the snow, although wet snow can be significantly denser and powder snow much less dense."
+        },
+        "lwe_thickness_of_precipitation_amount": {
+            "type": "data",
+            "unit": "m",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Implied depth of the layer of liquid water which has been deposited on the surface in the previous 3 hours. This includes rain, snow and hail, with the ice phase precipitation being considered as a liquid water equivalent (LWE)  value. It includes the contribution from the model convection scheme if this is invoked."
+        },
+        "surface_downwelling_longwave_flux_in_air": {
+            "type": "data",
+            "unit": "W/m2",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Longwave radiation at the surface from above directed at the ground."
+        },
+        "surface_downwelling_shortwave_flux_in_air": {
+            "type": "data",
+            "unit": "W/m2",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Total shortwave radiation at the surface from above directed at the ground."
+        },
+        "surface_downwelling_ultraviolet_flux_in_air": {
+            "type": "data",
+            "unit": "W/m2",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Ultraviolet  radiation at the surface from above directed at the ground."
+        },
+        "lwe_thickness_of_graupel_and_hail_fall_amount": {
+            "type": "data",
+            "unit": "m",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Implied depth of the layer of liquid water equivalent (LWE) hail produced by the model precipitation scheme and deposited on the surface in the previous hour."
+        },
+        "surface_direct_downwelling_shortwave_flux_in_air": {
+            "type": "data",
+            "unit": "W/m2",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Direct component of shortwave radiation at the surface from above directed at the ground."
+        },
+        "surface_diffusive_downwelling_shortwave_flux_in_air": {
+            "type": "data",
+            "unit": "W/m2",
+            "dimensions": [
+                "latitude",
+                "longitude",
+                "forecast:reference_datetime",
+                "forecast:horizon"
+            ],
+            "description": "Diffuse component of shortwave radiation at the surface from above directed at the ground."
+        }
+    },
+    "msft:container": "deterministic",
+    "cube:dimensions": {
+        "latitude": {
+            "axis": "y",
+            "type": "spatial",
+            "extent": [
+                50,
+                62
+            ]
+        },
+        "longitude": {
+            "axis": "x",
+            "type": "spatial",
+            "extent": [
+                5,
+                15
+            ]
+        },
+        "forecast:horizon": {
+            "type": "temporal",
+            "extent": [
+                null,
+                null
+            ],
+            "values": [
+                "PT0H",
+                "PT1H",
+                "PT2H",
+                "PT3H",
+                "PT4H",
+                "PT5H",
+                "PT6H",
+                "PT7H",
+                "PT8H",
+                "PT9H",
+                "PT10H",
+                "PT11H",
+                "PT12H",
+                "PT13H",
+                "PT14H",
+                "PT15H",
+                "PT16H",
+                "PT17H",
+                "PT18H",
+                "PT19H",
+                "PT20H",
+                "PT21H",
+                "PT22H",
+                "PT23H",
+                "PT24H",
+                "PT25H",
+                "PT26H",
+                "PT27H",
+                "PT28H",
+                "PT29H",
+                "PT30H",
+                "PT31H",
+                "PT32H",
+                "PT33H",
+                "PT34H",
+                "PT35H",
+                "PT36H",
+                "PT37H",
+                "PT38H",
+                "PT39H",
+                "PT40H",
+                "PT41H",
+                "PT42H",
+                "PT43H",
+                "PT44H",
+                "PT45H",
+                "PT46H",
+                "PT47H",
+                "PT48H",
+                "PT49H",
+                "PT50H",
+                "PT51H",
+                "PT52H",
+                "PT53H",
+                "PT54H",
+                "PT57H",
+                "PT60H",
+                "PT63H",
+                "PT66H",
+                "PT69H",
+                "PT72H",
+                "PT75H",
+                "PT78H",
+                "PT81H",
+                "PT84H",
+                "PT87H",
+                "PT90H",
+                "PT93H",
+                "PT96H",
+                "PT99H",
+                "PT102H",
+                "PT105H",
+                "PT108H",
+                "PT111H",
+                "PT114H",
+                "PT117H",
+                "PT120H"
+            ]
+        },
+        "forecast:reference_datetime": {
+            "type": "temporal",
+            "extent": [
+                "2023-12-15T00:00:00Z",
+                null
+            ]
+        }
+    },
+    "msft:storage_account": "ukmoeuwest",
+    "msft:short_description": "Met Office UK Deterministic Near Surface Level",
+    "title": "Near-surface level collection Met Office UKV 2km deterministic forecast",
+    "extent": {
+        "spatial": {
+            "bbox": [
+                [
+                    -13.7254,
+                    48.8643,
+                    4.3408,
+                    61.6102
+                ]
+            ]
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "2023-12-15T00:00:00Z",
+                    null
+                ]
+            ]
+        }
+    },
+    "license": "proprietary",
+    "keywords": [
+        "Met Office",
+        "Weather",
+        "Forecast",
+        "UK",
+        "Precipitation",
+        "Temperature",
+        "Wind",
+        "Pressure",
+        "Humidity"
+    ],
+    "providers": [
+        {
+            "name": "Met Office",
+            "roles": [
+                "producer",
+                "licensor",
+                "processor"
+            ],
+            "url": "https://www.metoffice.gov.uk/"
+        },
+        {
+            "name": "Microsoft",
+            "roles": [
+                "host",
+                "processor"
+            ],
+            "url": "https://planetarycomputer.microsoft.com"
+        }
+    ],
+    "assets": {
+        "thumbnail": {
+            "href": "https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/met-office-uk-deterministic-near-surface.jpg",
+            "type": "image/jpeg",
+            "title": "Near-surface level collection Met Office UKV 2km deterministic forecast Thumbnail",
+            "roles": [
+                "thumbnail"
+            ]
+        },
+        "geoparquet-items": {
+            "href": "abfs://items/met-office-uk-deterministic-near-surface.parquet",
+            "type": "application/x-parquet",
+            "title": "GeoParquet STAC items",
+            "description": "Snapshot of the collection's STAC items exported to GeoParquet format.",
+            "table:storage_options": {
+                "account_name": "pcstacitems"
+            },
+            "roles": [
+                "stac-items"
+            ]
+        }
+    }
+}
